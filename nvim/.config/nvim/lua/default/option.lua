@@ -2,7 +2,7 @@ vim.opt.backup = false								-- do not create a backup file
 vim.opt.fileencoding = "utf-8"						-- default file encoding
 vim.opt.completeopt = { "menuone", "noselect" }		-- completion menu popup configuration
 vim.opt.pumheight = 10								-- pop up menu height
-vim.opt.cmdheight = 2								-- more space in the neovim command line for displaying messages
+vim.opt.cmdheight = 1								-- more space in the neovim command line for displaying messages
 vim.opt.conceallevel = 0							-- so that `` is visible
 vim.opt.showmatch = true							-- highlight all matches
 vim.opt.incsearch = true							-- highlight all matches while typing
@@ -42,7 +42,6 @@ vim.cmd [[set formatoptions-=cro]]
 -- set colorscheme
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
-
 
 -- TEMPORARILY DISABLED OPTIONS --
 -- vim.opt.guifont = "monospace:h17"					-- font in graphical neovim applications

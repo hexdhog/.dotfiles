@@ -15,9 +15,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line root)
 plugins=(
   git
   colored-man-pages
-  zsh-syntax-highlighting
-  vi-mode
-  zsh-autosuggestions
+  #zsh-syntax-highlighting
+  #vi-mode
+  #zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
