@@ -21,5 +21,5 @@ cp $HOME/.dotfiles/resources/zsh/.oh-my-zsh/themes/* $HOME/.oh-my-zsh/themes/
 ### Install
 ```shell
 cd $HOME/.dotfiles
-./install.sh # rm -rf ~/.zshrc
+./install.sh
 ```
