@@ -8,7 +8,7 @@ exclude=(resources)
 for dir in */ ; do
 	name=`echo $dir | sed 's/\///g'`
 	if [[ ! " ${exclude[*]} " =~ " ${name} " ]]; then
-		echo "stowing: $name"
+		echo "installing: $name"
 		stow -D "${dir}"
 		stow "${dir}"
 	fi
