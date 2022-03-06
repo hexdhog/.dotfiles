@@ -1,0 +1,30 @@
+set noerrorbells
+set number relativenumber
+set backspace=indent,eol,start
+set showmatch
+set hlsearch
+
+let mapleader = " "
+
+" Save shortcut
+map <C-i> :w<CR>
+
+" Unhighlight search
+map <C-h> :noh<CR>
+
+" Prevent annoying 'Not an editor command' error
+cnoreabbrev ww WriteWithSudo
+cnoreabbrev WW WriteWithSudo
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Wq wq
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+
+" Awesome code movement trick
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+ " Resize windows
+nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
