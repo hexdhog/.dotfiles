@@ -32,16 +32,14 @@ map("n", "<C-g>", ":noh<CR>")
 map("n", "<leader>p", ":e#<CR>")
 
 -- navigate buffers
-map("n", "<C-m>", ":bnext<CR>")
-map("n", "<C-n>", ":bprevious<CR>")
+map("n", "<C-k>", ":bnext<CR>")
+map("n", "<C-j>", ":bprevious<CR>")
 
 -- navigate tabs
 map("n", "<C-l>", ":tabnext<CR>")
 map("n", "<C-h>", ":tabprevious<CR>")
 
 -- wq aliases
-vim.cmd [[ cnoreabbrev ww WriteWithSudo ]]
-vim.cmd [[ cnoreabbrev WW WriteWithSudo ]]
 vim.cmd [[ cnoreabbrev W w ]]
 vim.cmd [[ cnoreabbrev Q q ]]
 vim.cmd [[ cnoreabbrev Wq wq ]]
@@ -54,21 +52,13 @@ map("v", ">", ">gv")
 map("v", "<", "<gv")
 
 -- move selected block
-map("n", "K", "")
-map("n", "J", "")
 map("v", "K", ":m '<-2<CR>gv=gv")
 map("v", "J", ":m '>+1<CR>gv=gv")
 
 -- maintain copied text after visual paste
 map("v", "p", '"_dP')
 
--- VISUAL BLOCK --
--- move selected block
--- map("x", "J", ":move '>+1<CR>gv-gv")
--- map("x", "K", ":move '<-2<CR>gv-gv")
--- map("x", "<A-j>", ":move '>+1<CR>gv-gv")
--- map("x", "<A-k>", ":move '<-2<CR>gv-gv")
-
 -- PLUGIN REMAPS --
--- FZF LUA --
-map("n", "<C-p>", ":FzfLua files<CR>")
+-- Telescope
+map("n", "<C-p>", ":lua require('telescope.builtin').find_files()<cr>")
+-- map("n", "<C-m>", ":lua require('telescope.builtin').buffers()<cr>")

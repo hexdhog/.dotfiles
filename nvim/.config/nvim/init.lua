@@ -1,5 +1,7 @@
 require "default.startup"
+require "default.plugin"
 require "default.option"
 require "default.keymap"
-require "default.plugin"
+require "default.cmp"
+require "default.lsp"
 require "default.indent-blankline"
