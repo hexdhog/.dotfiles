@@ -51,12 +51,14 @@ return packer.startup(function(use)
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
 	use "windwp/nvim-autopairs"
+	use "numToStr/Comment.nvim"
 
 	-- file navigation
 	use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
 
 	-- syntax highlighting
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use "JoosepAlviste/nvim-ts-context-commentstring"
 
 	-- completion & snippets & snippets
 	use "hrsh7th/nvim-cmp"
@@ -71,6 +73,9 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-nvim-lsp"
 	use "neovim/nvim-lspconfig"
 	use "williamboman/nvim-lsp-installer"
+
+	-- git
+	use "lewis6991/gitsigns.nvim"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
