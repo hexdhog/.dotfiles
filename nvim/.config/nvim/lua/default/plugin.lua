@@ -54,10 +54,11 @@ return packer.startup(function(use)
 	use "numToStr/Comment.nvim"
 
 	-- file navigation
-	use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
+	use { "nvim-telescope/telescope.nvim", requires = { {"nvim-lua/plenary.nvim"} }}
+	use "kyazdani42/nvim-tree.lua"
 
 	-- syntax highlighting
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 	use "JoosepAlviste/nvim-ts-context-commentstring"
 
 	-- completion & snippets & snippets

@@ -62,3 +62,6 @@ map("v", "p", '"_dP')
 -- Telescope
 map("n", "<C-p>", ":lua require('telescope.builtin').find_files()<cr>")
 -- map("n", "<C-m>", ":lua require('telescope.builtin').buffers()<cr>")
+
+-- nvimtree
+map("n", "<C-o>", ":NvimTreeToggle<CR>")
