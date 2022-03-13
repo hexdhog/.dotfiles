@@ -44,9 +44,18 @@ return packer.startup(function(use)
 	use "wbthomason/packer.nvim" -- have packer manage itself
 	use "nvim-lua/popup.nvim" -- an implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- useful lua functions used ny lots of plugins
+
+	-- colorschemes
 	use "ellisonleao/gruvbox.nvim"
+
+	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
+	use "windwp/nvim-autopairs"
+
+	-- file navigation
 	use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
+
+	-- syntax highlighting
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 	-- completion & snippets & snippets
@@ -59,9 +68,9 @@ return packer.startup(function(use)
 	use "rafamadriz/friendly-snippets"
 
 	-- LSP
+	use "hrsh7th/cmp-nvim-lsp"
 	use "neovim/nvim-lspconfig"
 	use "williamboman/nvim-lsp-installer"
-	use "hrsh7th/cmp-nvim-lsp"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
