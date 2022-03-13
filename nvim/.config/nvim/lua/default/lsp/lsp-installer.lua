@@ -1,14 +1,19 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
-	return
+local status, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status then
+	print("ERROR: module 'nvim-lsp-installer' not found")
 end
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
+local status_handlers, handlers = pcall(require, "default.lsp.handlers")
+if not status_handlers then
+	print("ERROR: module 'default.lsp.handlers' not found")
+end
+
 lsp_installer.on_server_ready(function(server)
 	local opts = {
-		on_attach = require("default.lsp.handlers").on_attach,
-		capabilities = require("default.lsp.handlers").capabilities,
+		on_attach = handlers.on_attach,
+		capabilities = handlers.capabilities,
 	}
 
 	if server.name == "jsonls" then

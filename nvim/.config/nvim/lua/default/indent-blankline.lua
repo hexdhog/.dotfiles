@@ -2,8 +2,9 @@ vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:¬")
 
-local ok, indent_blankline = pcall("indent_blankline")
-if not ok then
+local status, indent_blankline = pcall(require, "indent_blankline")
+if not status then
+	print("ERROR: module 'indent_blankline' not found")
 	return
 end
 
