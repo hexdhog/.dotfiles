@@ -60,8 +60,10 @@ map("v", "p", '"_dP')
 
 -- PLUGIN REMAPS --
 -- Telescope
-map("n", "<C-p>", ":lua require('telescope.builtin').find_files()<cr>")
--- map("n", "<C-m>", ":lua require('telescope.builtin').buffers()<cr>")
+map("n", "<C-p>", ":lua require('telescope.builtin').find_files()<CR>")
+map("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>")
+map("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>")
+map("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<CR>")
 
 -- nvimtree
 map("n", "<C-o>", ":NvimTreeToggle<CR>")
