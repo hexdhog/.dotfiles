@@ -4,9 +4,10 @@ export EDITOR="$(which nvim)"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 export HOME_BIN="${HOME}/bin"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home"
-export M2_HOME="${HOME}/.apache-maven"
-export PATH="${PATH}:${M2_HOME}/bin:${HOME_BIN}"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home"
+# export M2_HOME="${HOME}/.apache-maven"
+export HOMEBREW_HOME="/opt/homebrew"
+export PATH="${PATH}:${HOMEBREW_HOME}/bin"
 
 # ZSH
 export ZSH="${HOME}/.oh-my-zsh"
