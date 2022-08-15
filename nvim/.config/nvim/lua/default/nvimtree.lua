@@ -26,8 +26,8 @@ nvim_tree.setup {
 	hijack_cursor = false,
 	update_cwd = true,
 	-- update_to_buf_dir = { -- deprecated
-		-- enable = true,
-		-- auto_open = true,
+	-- enable = true,
+	-- auto_open = true,
 	-- },
 	diagnostics = {
 		enable = true,
@@ -57,10 +57,10 @@ nvim_tree.setup {
 		mappings = {
 			custom_only = false,
 			list = {
-			{ key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-			{ key = "h", cb = tree_cb "close_node" },
-			{ key = "v", cb = tree_cb "vsplit" },
-			{ key = "s", cb = tree_cb "split" },
+				{ key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+				{ key = "h", cb = tree_cb "close_node" },
+				{ key = "v", cb = tree_cb "vsplit" },
+				{ key = "s", cb = tree_cb "split" },
 			},
 		},
 		number = false,
@@ -95,10 +95,10 @@ nvim_tree.setup {
 	-- disable_window_picker = 0, -- deprecated
 	-- root_folder_modifier = ":t", -- deprecated
 	-- show_icons = { -- deprecated
-		-- git = 1,
-		-- folders = 1,
-		-- files = 1,
-		-- folder_arrows = 1,
-		-- tree_width = 30,
+	-- git = 1,
+	-- folders = 1,
+	-- files = 1,
+	-- folder_arrows = 1,
+	-- tree_width = 30,
 	-- },
 }

@@ -43,7 +43,9 @@ vim.cmd [[set formatoptions-=cro]]
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 
+-- allow neovim to select text with the mouse
+vim.opt.mouse = "a"									-- allow the mouse to be used in all modes
+
 -- TEMPORARILY DISABLED OPTIONS --
 -- vim.opt.guifont = "monospace:h17"					-- font in graphical neovim applications
--- vim.opt.mouse = "a"									-- allow the mouse to be used in all modes
 -- vim.opt.clipboard = "unnamedplus"					-- allow neovim to acces the system clipboard

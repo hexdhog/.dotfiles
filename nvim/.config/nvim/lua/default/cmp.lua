@@ -79,53 +79,53 @@ cmp.setup {
 			else
 				fallback()
 			end
-		end, {
-		"i",
-		"s",
-	}),
-	["<S-Tab>"] = cmp.mapping(function(fallback)
-		if cmp.visible() then
-			cmp.select_prev_item()
-		elseif luasnip.jumpable(-1) then
-			luasnip.jump(-1)
-		else
+			end, {
+				"i",
+				"s",
+		}),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			elseif luasnip.jumpable(-1) then
+				luasnip.jump(-1)
+			else
 			fallback()
-		end
-	end, {
-	"i",
-	"s",
-}),
-  },
-  formatting = {
-	  fields = { "kind", "abbr", "menu" },
-	  format = function(entry, vim_item)
-		  -- Kind icons
-		  vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-		  -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-		  vim_item.menu = ({
-			  luasnip = "[Snippet]",
-			  buffer = "[Buffer]",
-			  path = "[Path]",
-		  })[entry.source.name]
-		  return vim_item
-	  end,
-  },
-  sources = {
-	  { name = "luasnip" },
-	  { name = "buffer" },
-	  { name = "path" },
-  },
-  confirm_opts = {
-	  behavior = cmp.ConfirmBehavior.Replace,
-	  select = false,
-  },
-  window = {
-	  documentation = {
-		  border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-	  },
-  },
-  experimental = {
-	  ghost_text = false,
-	  native_menu = false,
-  },
+			end
+			end, {
+				"i",
+				"s",
+		}),
+	},
+	formatting = {
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			-- Kind icons
+			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+			vim_item.menu = ({
+				luasnip = "[Snippet]",
+				buffer = "[Buffer]",
+				path = "[Path]",
+			})[entry.source.name]
+			return vim_item
+		end,
+	},
+	sources = {
+		{ name = "luasnip" },
+		{ name = "buffer" },
+		{ name = "path" },
+	},
+	confirm_opts = {
+		behavior = cmp.ConfirmBehavior.Replace,
+		select = false,
+	},
+	window = {
+		documentation = {
+			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		},
+	},
+	experimental = {
+		ghost_text = false,
+		native_menu = false,
+	},
 }

@@ -17,10 +17,10 @@ map("n", "<leader>k", "<C-w>k")
 map("n", "<leader>l", "<C-w>l")
 
 -- resize windows
-map("n", "<S-Up>", ":resize -2<CR>")
-map("n", "<S-Down>", ":resize +2<CR>")
+map("n", "<S-Up>", ":resize +2<CR>")
+map("n", "<S-Down>", ":resize -2<CR>")
 map("n", "<S-Left>", ":vertical resize +2<CR>")
-map("n", "<S-Rigth>", ":vertical resize -2<CR>")
+map("n", "<S-Right>", ":vertical resize -2<CR>")
 
 map("n", "<leader>+", ":exe \"resize \" . (winheight(0) * 3/2)<CR>")
 map("n", "<leader>-", ":exe \"resize \" . (winheight(0) * 2/3)<CR>")
@@ -29,7 +29,7 @@ map("n", "<leader>-", ":exe \"resize \" . (winheight(0) * 2/3)<CR>")
 map("n", "<C-g>", ":noh<CR>")
 
 -- jump to previous file
-map("n", "<leader>p", ":e#<CR>")
+map("n", "<leader>o", ":e#<CR>")
 
 -- navigate buffers
 map("n", "<C-k>", ":bnext<CR>")
@@ -45,6 +45,17 @@ vim.cmd [[ cnoreabbrev Q q ]]
 vim.cmd [[ cnoreabbrev Wq wq ]]
 vim.cmd [[ cnoreabbrev wQ wq ]]
 vim.cmd [[ cnoreabbrev WQ wq ]]
+
+-- copy to clipboard
+map("v", "<leader>y", "\"+y")
+map("n", "<leader>Y", "\"+yg_")
+map("n", "<leader>y", "\"+yy")
+
+-- paste from clipboard
+map("n", "<leader>p", "\"+p")
+map("n", "<leader>P", "\"+P")
+map("v", "<leader>p", "\"+p")
+map("v", "<leader>P", "\"+P")
 
 -- VISUAL --
 -- indent while in visual mode
