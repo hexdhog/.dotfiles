@@ -4,5 +4,6 @@ if not status then
 	return
 end
 
-require("default.lsp.lsp-installer")
+require("mason").setup()
+require("mason-lspconfig").setup()
 require("default.lsp.handlers").setup()
