@@ -1,3 +1,7 @@
 require "navigator".setup({
-	transparency = 15
+	border = "none",
+	transparency = 15,
+	lsp = {
+		format_on_save = false
+	}
 })
