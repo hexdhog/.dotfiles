@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 	use "JoosepAlviste/nvim-ts-context-commentstring"
+	use { "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" }
 
 	-- completion & snippets & snippets
 	use "hrsh7th/nvim-cmp"
@@ -74,6 +75,13 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-nvim-lsp"
 	use "neovim/nvim-lspconfig"
 	use "williamboman/nvim-lsp-installer"
+	use({
+		'ray-x/navigator.lua',
+		requires = {
+			{ 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+			{ 'neovim/nvim-lspconfig' },
+		},
+	})
 
 	-- git
 	use "lewis6991/gitsigns.nvim"
