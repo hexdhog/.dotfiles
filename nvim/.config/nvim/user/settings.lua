@@ -1,3 +1,29 @@
+-- disable unused builtins plugins
+local disabled_built_ins = {
+	"netrw",
+	"netrwPlugin",
+	"netrwSettings",
+	"netrwFileHandlers",
+	"gzip",
+	"zip",
+	"zipPlugin",
+	"tar",
+	"tarPlugin",
+	"getscript",
+	"getscriptPlugin",
+	"vimball",
+	"vimballPlugin",
+	"2html_plugin",
+	"logipat",
+	"rrhelper",
+	"spellfile_plugin",
+	"matchit"
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+	vim.g["loaded_" .. plugin] = 1
+end
+
 vim.opt.backup = false								-- do not create a backup file
 vim.opt.fileencoding = "utf-8"						-- default file encoding
 vim.opt.completeopt = { "menuone", "noselect" }		-- completion menu popup configuration
@@ -34,6 +60,7 @@ vim.opt.scrolloff = 8								-- always keep 8 lines below/above current cursor
 vim.opt.sidescrolloff = 8							-- always keep 8 columns to current cursor
 vim.opt.shortmess:append "c"						-- do not give ins-copmpletion-many message
 vim.opt.iskeyword:append({ "-" })					-- include "-" in word matches
+vim.opt.mouse = "a"									-- allow the mouse to be used in all modes
 vim.opt.hidden = true
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"				-- jump to next line when a line end is hit
@@ -42,9 +69,6 @@ vim.cmd [[set formatoptions-=cro]]
 -- set colorscheme
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
-
--- allow neovim to select text with the mouse
-vim.opt.mouse = "a"									-- allow the mouse to be used in all modes
 
 -- TEMPORARILY DISABLED OPTIONS --
 -- vim.opt.guifont = "monospace:h17"					-- font in graphical neovim applications

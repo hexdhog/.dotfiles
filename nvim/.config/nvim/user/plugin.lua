@@ -57,35 +57,35 @@ return packer.startup(function(use)
 	use { "nvim-telescope/telescope.nvim", requires = { {"nvim-lua/plenary.nvim"} }}
 	use "kyazdani42/nvim-tree.lua"
 
-	-- syntax highlighting
-	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-	use "JoosepAlviste/nvim-ts-context-commentstring"
-	use { "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" }
-
-	-- completion & snippets & snippets
-	use "hrsh7th/nvim-cmp"
-	use "hrsh7th/cmp-path"
-	use "hrsh7th/cmp-buffer"
-	use "hrsh7th/cmp-cmdline"
-	use "saadparwaiz1/cmp_luasnip"
-	use "L3MON4D3/LuaSnip"
-	use "rafamadriz/friendly-snippets"
-
-	-- LSP
-	use "hrsh7th/cmp-nvim-lsp"
-	use "neovim/nvim-lspconfig"
-	use "williamboman/mason.nvim"
-	use "williamboman/mason-lspconfig.nvim"
-	use({
-		'ray-x/navigator.lua',
-		requires = {
-			{ 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
-			{ 'neovim/nvim-lspconfig' },
-		},
-	})
-
 	-- git
 	use "lewis6991/gitsigns.nvim"
+
+	-- syntax highlighting
+	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+	-- use "JoosepAlviste/nvim-ts-context-commentstring"
+	-- use { "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" }
+
+	-- completion & snippets & snippets
+	-- use "hrsh7th/nvim-cmp"
+	-- use "hrsh7th/cmp-path"
+	-- use "hrsh7th/cmp-buffer"
+	-- use "hrsh7th/cmp-cmdline"
+	-- use "saadparwaiz1/cmp_luasnip"
+	-- use "L3MON4D3/LuaSnip"
+	-- use "rafamadriz/friendly-snippets"
+
+	-- LSP
+	-- use "hrsh7th/cmp-nvim-lsp"
+	-- use "neovim/nvim-lspconfig"
+	-- use "williamboman/mason.nvim"
+	-- use "williamboman/mason-lspconfig.nvim"
+	-- use({
+		-- 'ray-x/navigator.lua',
+		-- requires = {
+			-- { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+			-- { 'neovim/nvim-lspconfig' },
+		-- },
+	-- })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
