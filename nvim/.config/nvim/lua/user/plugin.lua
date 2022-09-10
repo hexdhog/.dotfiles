@@ -97,5 +97,6 @@ require "plugin.nvim-tree"
 require "plugin.nvim-autopairs"
 require "plugin.comment"
 require "plugin.gitsigns"
+require "plugin.nvim-treesitter"
 
 return ret
