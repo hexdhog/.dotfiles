@@ -34,13 +34,13 @@ end
 packer.init {
 	display = {
 		open_fn = function()
-			return require("packer.util").float { border = "rounded" }
+			return require("packer.util").float { border = "solid" }
 		end,
 	},
 }
 
 -- install your plugins here
-return packer.startup(function(use)
+local ret = packer.startup(function(use)
 	use "wbthomason/packer.nvim" -- have packer manage itself
 	use "nvim-lua/popup.nvim" -- an implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- useful lua functions used ny lots of plugins
@@ -54,8 +54,8 @@ return packer.startup(function(use)
 	use "numToStr/Comment.nvim"
 
 	-- file navigation
-	use { "nvim-telescope/telescope.nvim", requires = { {"nvim-lua/plenary.nvim"} }}
-	use "kyazdani42/nvim-tree.lua"
+	use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }
+	use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 
 	-- git
 	use "lewis6991/gitsigns.nvim"
@@ -91,3 +91,11 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+
+require "plugin.indent-blankline"
+require "plugin.nvim-tree"
+require "plugin.nvim-autopairs"
+require "plugin.comment"
+require "plugin.gitsigns"
+
+return ret
