@@ -32,8 +32,8 @@ map("n", "<C-g>", ":noh<CR>")
 map("n", "<leader>o", ":e#<CR>")
 
 -- navigate buffers
-map("n", "<C-k>", ":bnext<CR>")
-map("n", "<C-j>", ":bprevious<CR>")
+-- map("n", "<C-k>", ":bnext<CR>") -- disabled this in favour of nvim-cmp
+-- map("n", "<C-j>", ":bprevious<CR>") -- disabled this in favour of nvim-cmp
 
 -- navigate tabs
 map("n", "<C-l>", ":tabnext<CR>")

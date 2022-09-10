@@ -62,30 +62,16 @@ local ret = packer.startup(function(use)
 
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-	-- use "JoosepAlviste/nvim-ts-context-commentstring"
-	-- use { "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" }
 
-	-- completion & snippets & snippets
-	-- use "hrsh7th/nvim-cmp"
-	-- use "hrsh7th/cmp-path"
-	-- use "hrsh7th/cmp-buffer"
-	-- use "hrsh7th/cmp-cmdline"
-	-- use "saadparwaiz1/cmp_luasnip"
-	-- use "L3MON4D3/LuaSnip"
-	-- use "rafamadriz/friendly-snippets"
-
-	-- LSP
-	-- use "hrsh7th/cmp-nvim-lsp"
-	-- use "neovim/nvim-lspconfig"
-	-- use "williamboman/mason.nvim"
-	-- use "williamboman/mason-lspconfig.nvim"
-	-- use({
-		-- 'ray-x/navigator.lua',
-		-- requires = {
-			-- { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
-			-- { 'neovim/nvim-lspconfig' },
-		-- },
-	-- })
+	-- completion
+	use "neovim/nvim-lspconfig"
+	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-path"
+	use "hrsh7th/cmp-cmdline"
+	use "hrsh7th/nvim-cmp"
+	use "L3MON4D3/LuaSnip"
+	use "saadparwaiz1/cmp_luasnip"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
@@ -98,5 +84,7 @@ require "plugin.nvim-autopairs"
 require "plugin.comment"
 require "plugin.gitsigns"
 require "plugin.nvim-treesitter"
+require "plugin.luasnip"
+require "plugin.nvim-cmp"
 
 return ret
