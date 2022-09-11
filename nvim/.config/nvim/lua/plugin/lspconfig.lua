@@ -4,7 +4,7 @@ if not status then
 	return
 end
 
-lspmanager = require("lsp.manager")
+local lspmanager = require("lsp.manager")
 lspmanager.setup(lspconfig, "bashls")
 lspmanager.setup(lspconfig, "clangd")
 lspmanager.setup(lspconfig, "dockerls")

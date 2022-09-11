@@ -33,6 +33,8 @@ local on_attach = function(client, bufnr)
 	map('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
 	map('n', 'gr', vim.lsp.buf.references, bufopts)
 	map('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+
+	require("plugin.lsp_signature").on_attach(client, bufnr)
 end
 
 local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")

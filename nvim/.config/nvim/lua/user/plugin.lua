@@ -71,6 +71,8 @@ local ret = packer.startup(function(use)
 	use "hrsh7th/cmp-cmdline"
 	use "hrsh7th/nvim-cmp"
 	use "L3MON4D3/LuaSnip"
+	use "rafamadriz/friendly-snippets"
+	use "ray-x/lsp_signature.nvim"
 	use "saadparwaiz1/cmp_luasnip"
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
