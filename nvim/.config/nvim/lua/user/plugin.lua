@@ -76,6 +76,7 @@ local ret = packer.startup(function(use)
 	use "saadparwaiz1/cmp_luasnip"
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
+	use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
 	use({
 		'ray-x/navigator.lua',
 		requires = {
@@ -95,10 +96,11 @@ require "plugin.nvim-autopairs"
 require "plugin.comment"
 require "plugin.gitsigns"
 require "plugin.nvim-treesitter"
-require "plugin.luasnip"
+require "plugin.lua-snip"
 require "plugin.nvim-cmp"
 require "plugin.mason"
 require "plugin.lspconfig"
+require "plugin.trouble"
 require "plugin.navigator"
 
 return ret

@@ -18,7 +18,7 @@ navigator.setup({
 	}, -- e.g keymaps={{key = "GR", func = vim.lsp.buf.references}, } this replace gr default mapping
 	external = nil, -- true: enable for goneovim multigrid otherwise false
 	border = 'none', -- border style, can be one of 'none', 'single', 'double', "shadow"
-	lines_show_prompt = 50, -- when the result list items number more than lines_show_prompt,
+	lines_show_prompt = 10, -- when the result list items number more than lines_show_prompt,
 	-- fuzzy finder prompt will be shown
 	combined_attach = 'both', -- both: use both customized attach and navigator default attach, mine: only use my attach defined in vimrc
 	on_attach = function(client, bufnr)
@@ -76,17 +76,17 @@ navigator.setup({
 	lsp_installer = false, -- set to true if you would like use the lsp installed by williamboman/nvim-lsp-installer
 	mason = false, -- set to true if you would like use the lsp installed by williamboman/mason
 	icons = {
-		icons = false, -- set to false to use system default ( if you using a terminal does not have nerd/icon)
+		icons = true, -- set to false to use system default ( if you using a terminal does not have nerd/icon)
 		-- Code action
-		code_action_icon = "",
+		code_action_icon = " ",
 		-- code lens
-		code_lens_action_icon = "",
+		code_lens_action_icon = "",
 		-- Diagnostics
 		diagnostic_head = "",
-		diagnostic_err = "",
-		diagnostic_warn = "",
-		diagnostic_info = "",
-		diagnostic_hint = "",
+		diagnostic_err = "",
+		diagnostic_warn = "",
+		diagnostic_info = "",
+		diagnostic_hint = "",
 
 		diagnostic_head_severity_1 = '',
 		diagnostic_head_severity_2 = '',
