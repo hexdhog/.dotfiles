@@ -76,6 +76,13 @@ local ret = packer.startup(function(use)
 	use "saadparwaiz1/cmp_luasnip"
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
+	use({
+		'ray-x/navigator.lua',
+		requires = {
+			{ 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+			{ 'neovim/nvim-lspconfig' },
+		},
+	})
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
@@ -92,5 +99,6 @@ require "plugin.luasnip"
 require "plugin.nvim-cmp"
 require "plugin.mason"
 require "plugin.lspconfig"
+require "plugin.navigator"
 
 return ret

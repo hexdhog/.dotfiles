@@ -10,7 +10,7 @@ npairs.setup {
 		lua = { "string", "source" },
 		javascript = { "string", "template_string" },
 	},
-	disable_filetype = { "TelescopePrompt", "spectre_panel" },
+	disable_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" },
 	fast_wrap = {
 		map = "<M-e>",
 		chars = { "{", "[", "(", '"', "'" },
