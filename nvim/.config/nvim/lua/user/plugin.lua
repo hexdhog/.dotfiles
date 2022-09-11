@@ -63,7 +63,7 @@ local ret = packer.startup(function(use)
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
-	-- completion
+	-- completion && lsp
 	use "neovim/nvim-lspconfig"
 	use "hrsh7th/cmp-nvim-lsp"
 	use "hrsh7th/cmp-buffer"
@@ -72,6 +72,8 @@ local ret = packer.startup(function(use)
 	use "hrsh7th/nvim-cmp"
 	use "L3MON4D3/LuaSnip"
 	use "saadparwaiz1/cmp_luasnip"
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
@@ -86,5 +88,7 @@ require "plugin.gitsigns"
 require "plugin.nvim-treesitter"
 require "plugin.luasnip"
 require "plugin.nvim-cmp"
+require "plugin.mason"
+require "plugin.lspconfig"
 
 return ret
