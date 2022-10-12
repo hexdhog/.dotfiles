@@ -68,7 +68,9 @@ vim.cmd [[set formatoptions-=cro]]
 
 -- set colorscheme
 vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme ayu]])
+vim.cmd([[colorscheme gotham256]])
 
 -- TEMPORARILY DISABLED OPTIONS --
 -- vim.opt.guifont = "monospace:h17"					-- font in graphical neovim applications

@@ -50,6 +50,10 @@ local ret = packer.startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 	use "alvarosevilla95/luatab.nvim"
 
+	use "whatyouhide/vim-gotham"
+	use "ayu-theme/ayu-vim"
+	use "srcery-colors/srcery-vim"
+
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
 	use "windwp/nvim-autopairs"
