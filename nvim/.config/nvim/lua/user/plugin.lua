@@ -47,6 +47,7 @@ local ret = packer.startup(function(use)
 
 	-- colorschemes
 	use "ellisonleao/gruvbox.nvim"
+	use "nvim-lualine/lualine.nvim"
 
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
@@ -91,6 +92,7 @@ local ret = packer.startup(function(use)
 	end
 end)
 
+require "plugin.lualine"
 require "plugin.indent-blankline"
 require "plugin.nvim-tree"
 require "plugin.nvim-autopairs"
