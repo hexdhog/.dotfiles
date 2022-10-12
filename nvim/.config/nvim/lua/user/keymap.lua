@@ -4,6 +4,10 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+local function unmap(mode, lhs)
+	pcall(vim.api.nvim_del_keymap, mode, lhs)
+end
+
 -- remap space as leader key
 map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
@@ -11,6 +15,11 @@ vim.g.maplocalleader = " "
 
 -- NORMAL --
 -- move between windows
+unmap("n", "<leader>h")
+unmap("n", "<leader>j")
+unmap("n", "<leader>k")
+unmap("n", "<leader>l")
+
 map("n", "<leader>h", "<C-w>h")
 map("n", "<leader>j", "<C-w>j")
 map("n", "<leader>k", "<C-w>k")
@@ -86,3 +95,9 @@ map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent =
 map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
 map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
 map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+
+-- harpoon
+map("n", "<C-f>", "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<CR>")
+map("n", "<leader>fa", "<cmd>lua require(\"harpoon.mark\").add_file()<CR>")
+map("n", "<leader>fn", "<cmd>lua require(\"harpoon.ui\").nav_next()<CR>")
+map("n", "<leader>fp", "<cmd>lua require(\"harpoon.ui\").nav_prev()<CR>")
