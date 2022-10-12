@@ -54,6 +54,7 @@ local ret = packer.startup(function(use)
 	use "lukas-reineke/indent-blankline.nvim"
 	use "windwp/nvim-autopairs"
 	use "numToStr/Comment.nvim"
+	use "tranvansang/octave.vim"
 
 	-- file navigation
 	use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }
