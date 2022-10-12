@@ -101,3 +101,7 @@ map("n", "<C-f>", "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<CR>")
 map("n", "<leader>fa", "<cmd>lua require(\"harpoon.mark\").add_file()<CR>")
 map("n", "<leader>fn", "<cmd>lua require(\"harpoon.ui\").nav_next()<CR>")
 map("n", "<leader>fp", "<cmd>lua require(\"harpoon.ui\").nav_prev()<CR>")
+
+-- git-worktree
+map("n", "<leader>fw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
+map("n", "<leader>fc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")

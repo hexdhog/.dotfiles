@@ -26,7 +26,7 @@ augroup end
 -- use a protected call so we don't error out on first use
 local status, packer = pcall(require, "packer")
 if not status then
-	print("ERROR: module 'packer' not found")
+	print("ERROR: module \"packer\" not found")
 	return
 end
 
@@ -57,8 +57,9 @@ local ret = packer.startup(function(use)
 
 	-- file navigation
 	use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }
-	use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
-	use "ThePrimeagen/harpoon"
+	use { "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } }
+	use { "ThePrimeagen/harpoon", requires = { "nvim-lua/plenary.nvim" } }
+	use { "ThePrimeagen/git-worktree.nvim", requires = { "nvim-telescope/telescope.nvim" } }
 
 	-- git
 	use "lewis6991/gitsigns.nvim"
@@ -81,10 +82,10 @@ local ret = packer.startup(function(use)
 	use "williamboman/mason-lspconfig.nvim"
 	use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
 	use({
-		'ray-x/navigator.lua',
+		"ray-x/navigator.lua",
 		requires = {
-			{ 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
-			{ 'neovim/nvim-lspconfig' },
+			{ "ray-x/guihua.lua", run = "cd lua/fzy && make" },
+			{ "neovim/nvim-lspconfig" },
 		},
 	})
 
@@ -100,6 +101,7 @@ require "plugin.nvim-tree"
 require "plugin.nvim-autopairs"
 require "plugin.comment"
 require "plugin.gitsigns"
+require "plugin.git-worktree"
 require "plugin.nvim-treesitter"
 require "plugin.lua-snip"
 require "plugin.nvim-cmp"
