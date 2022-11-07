@@ -1,4 +1,10 @@
-require'nvim-treesitter.configs'.setup {
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status then
+	print("ERROR: module 'treesitter' not found")
+	return
+end
+
+treesitter.setup({
 	-- A list of parser names, or "all"
 	ensure_installed = {
 		"c",
@@ -47,4 +53,4 @@ require'nvim-treesitter.configs'.setup {
 	indent = {
 		enable = false
 	}
-}
+})

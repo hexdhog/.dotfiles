@@ -71,6 +71,7 @@ local ret = packer.startup(function(use)
 
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+	use { "nvim-treesitter/nvim-treesitter-context", requires = { "nvim-treesitter/nvim-treesitter" } }
 
 	-- completion && lsp
 	use "neovim/nvim-lspconfig"
@@ -108,6 +109,7 @@ require "plugin.comment"
 require "plugin.gitsigns"
 require "plugin.git-worktree"
 require "plugin.nvim-treesitter"
+require "plugin.nvim-treesitter-context"
 require "plugin.lua-snip"
 require "plugin.nvim-cmp"
 require "plugin.mason"
