@@ -17,7 +17,7 @@ navigator.setup({
 		{ key = "gK", func = vim.lsp.declaration, desc = 'declaration' },
 	}, -- e.g keymaps={{key = "GR", func = vim.lsp.buf.references}, } this replace gr default mapping
 	external = nil, -- true: enable for goneovim multigrid otherwise false
-	border = 'none', -- border style, can be one of 'none', 'single', 'double', "shadow"
+	border = 'single', -- border style, can be one of 'none', 'single', 'double', "shadow"
 	lines_show_prompt = 10, -- when the result list items number more than lines_show_prompt,
 	-- fuzzy finder prompt will be shown
 	combined_attach = 'both', -- both: use both customized attach and navigator default attach, mine: only use my attach defined in vimrc

@@ -19,7 +19,7 @@ end
 vim.cmd [[
 augroup packer_user_config
 autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
+autocmd BufWritePost plugin.lua source <afile> | PackerSync
 augroup end
 ]]
 
@@ -45,18 +45,21 @@ local ret = packer.startup(function(use)
 	use "nvim-lua/popup.nvim" -- an implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" -- useful lua functions used ny lots of plugins
 
-	-- colorschemes
+	-- theme
 	use "ellisonleao/gruvbox.nvim"
+	use "whatyouhide/vim-gotham"
+	use "srcery-colors/srcery-vim"
 	use "nvim-lualine/lualine.nvim"
 	use "alvarosevilla95/luatab.nvim"
 
-	use "whatyouhide/vim-gotham"
-	use "ayu-theme/ayu-vim"
-	use "srcery-colors/srcery-vim"
+	-- PLUGINS TO TRY OUT
+	-- use "preservim/nerdcommenter"
+	-- use "mg979/vim-visual-multi"
 
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
 	use "windwp/nvim-autopairs"
+	use "preservim/nerdcommenter"
 	use "numToStr/Comment.nvim"
 	use "tranvansang/octave.vim"
 
@@ -68,6 +71,7 @@ local ret = packer.startup(function(use)
 
 	-- git
 	use "lewis6991/gitsigns.nvim"
+	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }

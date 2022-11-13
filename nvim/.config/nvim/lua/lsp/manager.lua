@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	local bufopts = { noremap=true, silent=true, buffer=bufnr }
+	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 	map('n', 'gD', vim.lsp.buf.declaration, bufopts)
 	map('n', 'gd', vim.lsp.buf.definition, bufopts)
 	map('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -32,7 +32,7 @@ local on_attach = function(client, bufnr)
 	map('n', '<space>rn', vim.lsp.buf.rename, bufopts)
 	map('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
 	map('n', 'gr', vim.lsp.buf.references, bufopts)
-	map('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+	map('n', '<space>ff', vim.lsp.buf.formatting, bufopts)
 
 	require("plugin.lsp_signature").on_attach(client, bufnr)
 end
@@ -50,7 +50,7 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
-M.setup = function (lspconfig, server)
+M.setup = function(lspconfig, server)
 	local server_config = require("lsp.config." .. server)
 	server_config["on_attach"] = on_attach
 	server_config["flags"] = lsp_flags

@@ -4,7 +4,7 @@ if not status then
 	return
 end
 
-local status, mason_lspconfig= pcall(require, "mason-lspconfig")
+local status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status then
 	print("ERROR: module 'mason' not found")
 	return

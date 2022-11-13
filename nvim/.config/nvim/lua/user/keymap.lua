@@ -83,7 +83,7 @@ map("v", "p", '"_dP')
 map("n", "<C-p>", ":lua require('telescope.builtin').find_files()<CR>")
 map("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>")
 map("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>")
-map("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<CR>")
+map("n", "<leader>ft", ":lua require('telescope.builtin').help_tags()<CR>")
 
 -- nvimtree
 map("n", "<C-o>", ":NvimTreeToggle<CR>")
@@ -101,7 +101,22 @@ map("n", "<C-f>", "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<CR>")
 map("n", "<leader>fa", "<cmd>lua require(\"harpoon.mark\").add_file()<CR>")
 map("n", "<leader>fn", "<cmd>lua require(\"harpoon.ui\").nav_next()<CR>")
 map("n", "<leader>fp", "<cmd>lua require(\"harpoon.ui\").nav_prev()<CR>")
+map("n", "<leader>f1", "<cmd>:lua require(\"harpoon.ui\").nav_file(1)<CR>")
+map("n", "<leader>f2", "<cmd>:lua require(\"harpoon.ui\").nav_file(2)<CR>")
+map("n", "<leader>f3", "<cmd>:lua require(\"harpoon.ui\").nav_file(3)<CR>")
+map("n", "<leader>f4", "<cmd>:lua require(\"harpoon.ui\").nav_file(4)<CR>")
+map("n", "<leader>f5", "<cmd>:lua require(\"harpoon.ui\").nav_file(5)<CR>")
+map("n", "<leader>f6", "<cmd>:lua require(\"harpoon.ui\").nav_file(6)<CR>")
+map("n", "<leader>f7", "<cmd>:lua require(\"harpoon.ui\").nav_file(7)<CR>")
+map("n", "<leader>f8", "<cmd>:lua require(\"harpoon.ui\").nav_file(8)<CR>")
+map("n", "<leader>f9", "<cmd>:lua require(\"harpoon.ui\").nav_file(9)<CR>")
 
 -- git-worktree
 map("n", "<leader>fw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
 map("n", "<leader>fc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
+
+-- diffview
+map("n", "<leader>fd", "<cmd>DiffviewOpen<CR>")
+map("n", "<leader>fx", "<cmd>DiffviewClose<CR>")
+map("n", "<leader>fr", "<cmd>DiffviewRefresh<CR>")
+map("n", "<leader>fo", "<cmd>DiffviewToggleFiles<CR>")
