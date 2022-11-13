@@ -53,8 +53,9 @@ local ret = packer.startup(function(use)
 	use "alvarosevilla95/luatab.nvim"
 
 	-- PLUGINS TO TRY OUT
-	-- use "preservim/nerdcommenter"
-	-- use "mg979/vim-visual-multi"
+		-- use "preservim/nerdcommenter"
+		-- use "mg979/vim-visual-multi"
+		-- use "TimUntersberger/neogit"
 
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
