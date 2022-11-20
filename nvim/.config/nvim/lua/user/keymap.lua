@@ -66,6 +66,10 @@ map("n", "<leader>P", "\"+P")
 map("v", "<leader>p", "\"+p")
 map("v", "<leader>P", "\"+P")
 
+--  center cursor when <C-u> and <C-d>
+map("n", "<C-u>", "<C-u>zz0")
+map("n", "<C-d>", "<C-d>zz0")
+
 -- VISUAL --
 -- indent while in visual mode
 map("v", ">", ">gv")
