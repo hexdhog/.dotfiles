@@ -54,7 +54,7 @@ local ret = packer.startup(function(use)
 
 	-- PLUGINS TO TRY OUT
 		-- use "preservim/nerdcommenter"
-		-- use "mg979/vim-visual-multi"
+		use "mg979/vim-visual-multi"
 		-- use "TimUntersberger/neogit"
 
 	-- misc
