@@ -21,7 +21,7 @@ navigator.setup({
 	lines_show_prompt = 10, -- when the result list items number more than lines_show_prompt,
 	-- fuzzy finder prompt will be shown
 	combined_attach = 'both', -- both: use both customized attach and navigator default attach, mine: only use my attach defined in vimrc
-	on_attach = function(client, bufnr)
+	on_attach = function(_, _)
 		-- your on_attach will be called at end of navigator on_attach
 	end,
 	ts_fold = false,
@@ -52,7 +52,7 @@ navigator.setup({
 		diagnostic = {
 			underline = true,
 			virtual_text = { spacing = 3, source = true }, -- show virtual for diagnostic message
-			update_in_insert = false, -- update diagnostic message in insert mode
+			update_in_insert = true, -- update diagnostic message in insert mode
 			severity_sort = { reverse = true },
 		},
 		format_on_save = false, -- set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
@@ -74,7 +74,7 @@ navigator.setup({
 		servers = {}, -- you can add additional lsp server so navigator will load the default for you
 	},
 	lsp_installer = false, -- set to true if you would like use the lsp installed by williamboman/nvim-lsp-installer
-	mason = false, -- set to true if you would like use the lsp installed by williamboman/mason
+	mason = true, -- set to true if you would like use the lsp installed by williamboman/mason
 	icons = {
 		icons = true, -- set to false to use system default ( if you using a terminal does not have nerd/icon)
 		-- Code action
@@ -94,6 +94,7 @@ navigator.setup({
 		diagnostic_head_description = '',
 		diagnostic_virtual_text = '',
 		diagnostic_file = '',
+
 		-- Values
 		value_changed = '',
 		value_definition = '', -- it is easier to see than 🦕
@@ -108,18 +109,52 @@ navigator.setup({
 		},
 		-- Treesitter
 		match_kinds = {
-			var = ' ', -- "👹", -- Vampaire
-			method = 'ƒ ', --  "🍔", -- mac
-			['function'] = ' ', -- "🤣", -- Fun
-			parameter = '  ', -- Pi
+			var = ' ',
+			method = ' ',
+			['function'] = '  ',
+			parameter = '  ',
 			associated = '',
 			namespace = '',
 			type = ' ',
-			field = '',
-			module = '',
-			flag = '',
+			field = 'ﰠ ',
+			module = ' ',
+			flag = 'ﰠ ',
 		},
 		treesitter_defult = '',
 		doc_symbols = '',
 	},
 })
+  -- symbol_map = {
+  --   Text = "",
+  --   Method = "",
+  --   Function = "",
+  --   Constructor = "",
+  --   Field = "ﰠ",
+  --   Variable = "",
+  --   Class = "ﴯ",
+  --   Interface = "",
+  --
+  --   Module = "",
+  --
+  --   Property = "ﰠ",
+  --
+  --   Unit = "塞",
+  --   Value = "",
+  --   Enum = "",
+  --   Keyword = "",
+  --   Snippet = "",
+  --   Color = "",
+  --   File = "",
+  --
+  --   Reference = "",
+  --
+  --   Folder = "",
+  --   EnumMember = "",
+  --
+  --   Constant = "",
+  --
+  --   Struct = "פּ",
+  --   Event = "",
+  --   Operator = "",
+  --   TypeParameter = ""
+  -- },

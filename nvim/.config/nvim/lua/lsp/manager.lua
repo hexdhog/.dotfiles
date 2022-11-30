@@ -3,11 +3,11 @@ local M = {}
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local map = vim.keymap.set
-local opts = { noremap = true, silent = true }
-map('n', '<space>e', vim.diagnostic.open_float, opts)
-map('n', '[d', vim.diagnostic.goto_prev, opts)
-map('n', ']d', vim.diagnostic.goto_next, opts)
-map('n', '<space>q', vim.diagnostic.setloclist, opts)
+-- local opts = { noremap = true, silent = true }
+-- map('n', '<space>e', vim.diagnostic.open_float, opts)
+-- map('n', '[d', vim.diagnostic.goto_prev, opts)
+-- map('n', ']d', vim.diagnostic.goto_next, opts)
+-- map('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer

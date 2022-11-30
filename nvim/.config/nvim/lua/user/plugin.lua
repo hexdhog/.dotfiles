@@ -53,9 +53,9 @@ local ret = packer.startup(function(use)
 	use "alvarosevilla95/luatab.nvim"
 
 	-- PLUGINS TO TRY OUT
-		-- use "preservim/nerdcommenter"
-		use "mg979/vim-visual-multi"
-		-- use "TimUntersberger/neogit"
+	-- use "preservim/nerdcommenter"
+	-- use "TimUntersberger/neogit"
+	-- use 'norcalli/nvim-colorizer.lua'
 
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
@@ -63,6 +63,7 @@ local ret = packer.startup(function(use)
 	use "preservim/nerdcommenter"
 	use "numToStr/Comment.nvim"
 	use "tranvansang/octave.vim"
+	use "mg979/vim-visual-multi"
 
 	-- file navigation
 	use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }
