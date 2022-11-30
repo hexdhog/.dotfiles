@@ -51,11 +51,11 @@ local ret = packer.startup(function(use)
 	use "srcery-colors/srcery-vim"
 	use "nvim-lualine/lualine.nvim"
 	use "alvarosevilla95/luatab.nvim"
+	use 'norcalli/nvim-colorizer.lua'
 
 	-- PLUGINS TO TRY OUT
 	-- use "preservim/nerdcommenter"
 	-- use "TimUntersberger/neogit"
-	-- use 'norcalli/nvim-colorizer.lua'
 
 	-- misc
 	use "lukas-reineke/indent-blankline.nvim"
@@ -108,6 +108,7 @@ end)
 
 require "plugin.lualine"
 require "plugin.luatab"
+require "plugin.nvim-colorizer"
 require "plugin.indent-blankline"
 require "plugin.nvim-tree"
 require "plugin.nvim-autopairs"
