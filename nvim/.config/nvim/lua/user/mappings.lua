@@ -38,7 +38,7 @@ map("n", "<leader>-", "<cmd>exe \"resize \" . (winheight(0) * 2/3)<CR>")
 map("n", "<C-g>", "<cmd>noh<CR>")
 
 -- jump to previous file
-map("n", "<leader>fp", "<cmd>e#<CR>")
+map("n", "<leader>fe", "<cmd>e#<CR>")
 
 -- navigate buffers
 -- map("n", "<C-k>", "<cmd>bnext<CR>") -- disabled this in favour of nvim-cmp
