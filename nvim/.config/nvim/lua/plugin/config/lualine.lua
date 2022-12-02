@@ -1,10 +1,10 @@
 local status, lualine = pcall(require, "lualine")
 if not status then
-	print("ERROR: module 'lualine' not found")
+	print("ERROR: module \"lualine\" not found")
 	return
 end
 
-lualine.setup {
+lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = 'auto',
@@ -43,4 +43,4 @@ lualine.setup {
 	winbar = {},
 	inactive_winbar = {},
 	extensions = {}
-}
+})

@@ -1,10 +1,10 @@
 local status, npairs = pcall(require, "nvim-autopairs")
 if not status then
-	print("ERROR: module 'nvim-autopairs' not found")
+	print("ERROR: module \"nvim-autopairs\" not found")
 	return
 end
 
-npairs.setup {
+npairs.setup({
 	check_ts = true,
 	ts_config = {
 		lua = { "string", "source" },
@@ -22,4 +22,4 @@ npairs.setup {
 		highlight = "PmenuSel",
 		highlight_grey = "LineNr",
 	},
-}
+})

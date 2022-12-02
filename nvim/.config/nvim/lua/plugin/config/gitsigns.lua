@@ -1,10 +1,10 @@
 local status, gitsigns = pcall(require, "gitsigns")
 if not status then
-	print("ERROR: module 'Comment' not found")
+	print("ERROR: module \"gitsigns\" not found")
 	return
 end
 
-gitsigns.setup {
+gitsigns.setup({
 	signs = {
 		add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
 		change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
@@ -44,4 +44,4 @@ gitsigns.setup {
 	yadm = {
 		enable = false
 	},
-}
+})

@@ -1,6 +1,6 @@
 local status, git_worktree = pcall(require, "git-worktree")
 if not status then
-	print("ERROR: module 'git-worktree' not found")
+	print("ERROR: module \"git-worktree\" not found")
 	return
 end
 
@@ -14,8 +14,11 @@ git_worktree.setup({
 
 local status, telescope = pcall(require, "telescope")
 if not status then
-	print("ERROR: module 'telescope' not found")
+	print("ERROR: module \"telescope\" not found")
 	return
 end
 
 telescope.load_extension("git_worktree")
+
+vim.keymap.set("n", "<leader>gw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
+vim.keymap.set("n", "<leader>gc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")

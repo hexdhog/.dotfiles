@@ -1,6 +1,6 @@
 local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status then
-	print("ERROR: module 'treesitter' not found")
+	print("ERROR: module \"treesitter\" not found")
 	return
 end
 
