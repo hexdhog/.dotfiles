@@ -67,6 +67,11 @@ packer.startup(function(use)
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 	use { "nvim-treesitter/nvim-treesitter-context", requires = { "nvim-treesitter/nvim-treesitter" } }
 
+	-- lsp
+	use { "neovim/nvim-lspconfig" }
+	use { "williamboman/mason.nvim", requires = "neovim/nvim-lspconfig" }
+	use { "williamboman/mason-lspconfig.nvim", requires = "williamboman/mason.nvim" }
+
 	-- PLUGINS TO TRY OUT
 	-- use { "preservim/nerdcommenter"
 	-- use { "TimUntersberger/neogit"

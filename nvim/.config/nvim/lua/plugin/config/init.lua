@@ -21,3 +21,7 @@ require("plugin.config.comment")
 require("plugin.config.nvim-autopairs")
 require("plugin.config.nvim-colorizer")
 require("plugin.config.indent-blankline")
+
+-- lsp & completion
+require("plugin.config.mason")
+require("plugin.config.lspconfig")
