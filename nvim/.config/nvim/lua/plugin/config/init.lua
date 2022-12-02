@@ -25,3 +25,5 @@ require("plugin.config.indent-blankline")
 -- lsp & completion
 require("plugin.config.mason")
 require("plugin.config.lspconfig")
+require("plugin.config.luasnip")
+require("plugin.config.nvim-cmp")
