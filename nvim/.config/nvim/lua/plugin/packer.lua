@@ -52,10 +52,9 @@ packer.startup(function(use)
 	-- misc/utils
 	use { "lukas-reineke/indent-blankline.nvim" }
 	use { 'norcalli/nvim-colorizer.lua' }
-	use { "preservim/nerdcommenter" }
 	use { "mg979/vim-visual-multi" }
 	use { "windwp/nvim-autopairs" }
-	-- use { "numToStr/Comment.nvim" }
+	use { "numToStr/Comment.nvim" }
 
 	-- languages
 	use { "tranvansang/octave.vim" }

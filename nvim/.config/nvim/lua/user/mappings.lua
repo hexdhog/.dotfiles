@@ -26,27 +26,27 @@ map("n", "<leader>k", "<C-w>k")
 map("n", "<leader>l", "<C-w>l")
 
 -- resize windows
-map("n", "<S-Up>", ":resize +2<CR>")
-map("n", "<S-Down>", ":resize -2<CR>")
-map("n", "<S-Left>", ":vertical resize +2<CR>")
-map("n", "<S-Right>", ":vertical resize -2<CR>")
+map("n", "<S-Up>", "<cmd>resize +2<CR>")
+map("n", "<S-Down>", "<cmd>resize -2<CR>")
+map("n", "<S-Left>", "<cmd>vertical resize +2<CR>")
+map("n", "<S-Right>", "<cmd>vertical resize -2<CR>")
 
-map("n", "<leader>+", ":exe \"resize \" . (winheight(0) * 3/2)<CR>")
-map("n", "<leader>-", ":exe \"resize \" . (winheight(0) * 2/3)<CR>")
+map("n", "<leader>+", "<cmd>exe \"resize \" . (winheight(0) * 3/2)<CR>")
+map("n", "<leader>-", "<cmd>exe \"resize \" . (winheight(0) * 2/3)<CR>")
 
 -- disable highlight
-map("n", "<C-g>", ":noh<CR>")
+map("n", "<C-g>", "<cmd>noh<CR>")
 
 -- jump to previous file
-map("n", "<leader>o", ":e#<CR>")
+map("n", "<leader>fp", "<cmd>e#<CR>")
 
 -- navigate buffers
--- map("n", "<C-k>", ":bnext<CR>") -- disabled this in favour of nvim-cmp
--- map("n", "<C-j>", ":bprevious<CR>") -- disabled this in favour of nvim-cmp
+-- map("n", "<C-k>", "<cmd>bnext<CR>") -- disabled this in favour of nvim-cmp
+-- map("n", "<C-j>", "<cmd>bprevious<CR>") -- disabled this in favour of nvim-cmp
 
 -- navigate tabs
-map("n", "<C-l>", ":tabnext<CR>")
-map("n", "<C-h>", ":tabprevious<CR>")
+map("n", "<C-l>", "<cmd>tabnext<CR>")
+map("n", "<C-h>", "<cmd>tabprevious<CR>")
 
 -- wq aliases
 vim.cmd("cnoreabbrev W w")
@@ -76,8 +76,8 @@ map("v", ">", ">gv")
 map("v", "<", "<gv")
 
 -- move selected block
-map("v", "K", ":m '<-2<CR>gv=gv")
-map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", "<cmd>m '<-2<CR>gv=gv")
+map("v", "J", "<cmd>m '>+1<CR>gv=gv")
 
 -- maintain copied text after visual paste
 map("v", "p", '"_dP')
