@@ -81,7 +81,6 @@ packer.startup(function(use)
 	use { "ray-x/lsp_signature.nvim" }
 
 	-- PLUGINS TO TRY OUT
-	-- use { "preservim/nerdcommenter"
 	-- use { "TimUntersberger/neogit"
 
 end)

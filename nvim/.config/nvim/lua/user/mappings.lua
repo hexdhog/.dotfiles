@@ -76,8 +76,8 @@ map("v", ">", ">gv")
 map("v", "<", "<gv")
 
 -- move selected block
-map("v", "K", "<cmd>m '<-2<CR>gv=gv")
-map("v", "J", "<cmd>m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv") -- using : as <cmd> provokes unwanted behaviour
+map("v", "J", ":m '>+1<CR>gv=gv")
 
 -- maintain copied text after visual paste
 map("v", "p", '"_dP')
