@@ -32,8 +32,9 @@ packer.init {
 packer.startup(function(use)
 	-- general
 	use { "wbthomason/packer.nvim" } -- have packer manage itself
-	use { "nvim-lua/popup.nvim" } -- an implementation of the Popup API from vim in Neovim
 	use { "nvim-lua/plenary.nvim" } -- useful lua functions used ny lots of plugins
+	use { "nvim-lua/popup.nvim" } -- an implementation of the Popup API from vim in Neovim
+	use { "lewis6991/impatient.nvim" } -- improve startup time
 
 	-- theme
 	use { "ellisonleao/gruvbox.nvim" }
