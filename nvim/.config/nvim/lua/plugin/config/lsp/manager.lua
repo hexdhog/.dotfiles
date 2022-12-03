@@ -19,6 +19,12 @@ local on_attach = function(client, bufnr)
 	require("plugin.config.lsp-signature").on_attach(client, bufnr)
 end
 
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status then
 	print("ERROR: module \"cmp_nvim_lsp\" not found")
@@ -33,8 +39,10 @@ local lsp_flags = {
 
 local handlers = {
 	['textDocument/publishDiagnostics'] = vim.lsp.with(
-		vim.lsp.diagnostic.on_publish_diagnostics, {
+		vim.lsp.diagnostic.on_publish_diagnostics,
+		{
 			update_in_insert = true,
+			severity_sort = true
 		}
 	)
 }
@@ -47,5 +55,6 @@ M.setup = function(lspconfig, server)
 	server_config["handlers"] = handlers
 	lspconfig[server].setup(server_config)
 end
+
 
 return M

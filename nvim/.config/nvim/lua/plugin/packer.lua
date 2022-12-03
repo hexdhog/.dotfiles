@@ -84,5 +84,4 @@ packer.startup(function(use)
 
 	-- PLUGINS TO TRY OUT
 	-- use { "TimUntersberger/neogit"
-
 end)
