@@ -37,12 +37,13 @@ packer.startup(function(use)
 	use { "lewis6991/impatient.nvim" } -- improve startup time
 
 	-- theme
-	use { "ellisonleao/gruvbox.nvim" }
+	use { "folke/tokyonight.nvim" }
 	use { "whatyouhide/vim-gotham" }
+	use { "ellisonleao/gruvbox.nvim" }
 	use { "srcery-colors/srcery-vim" }
 	use { "nvim-lualine/lualine.nvim" }
 	use { "alvarosevilla95/luatab.nvim" }
-	use { "kyazdani42/nvim-web-devicons" } 
+	use { "kyazdani42/nvim-web-devicons" }
 
 	-- file navigation
 	use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }

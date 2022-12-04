@@ -14,7 +14,7 @@ require("plugin.config.git-worktree")
 -- theme
 require("plugin.config.luatab")
 require("plugin.config.lualine")
-require("plugin.config.colorscheme")
+require("plugin.config.tokyodark")
 
 -- misc
 require("plugin.config.comment")
