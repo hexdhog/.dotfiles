@@ -13,11 +13,11 @@ local opts = {
 	}
 }
 
-M.setup = function ()
+M.setup = function()
 	lsp_signature.setup(opts)
 end
 
-M.on_attach = function (client, bufnr)
+M.on_attach = function(client, bufnr)
 	for k, v in pairs(opts) do client[k] = v end
 	lsp_signature.on_attach(client, bufnr)
 end
