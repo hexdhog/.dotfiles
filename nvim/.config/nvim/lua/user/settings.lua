@@ -24,7 +24,7 @@ for _, plugin in pairs(disabled_built_ins) do
 	vim.g["loaded_" .. plugin] = 1
 end
 
-vim.opt.backup = false -- do not create a backup file
+vim.opt.guicursor = "" -- block cursor in insert mode
 vim.opt.fileencoding = "utf-8" -- default file encoding
 vim.opt.completeopt = { "menuone", "noselect" } -- completion menu popup configuration
 vim.opt.pumheight = 10 -- pop up menu height
@@ -44,7 +44,9 @@ vim.opt.swapfile = false -- disable swap files
 vim.opt.termguicolors = true -- enable term gui colors
 vim.opt.timeoutlen = 1000 -- time to wait for mapped sequence to complete (in miliseconds)
 vim.opt.undofile = true -- enable persistent undo
-vim.opt.updatetime = 300 -- faster completion (default = 4000ms)
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.updatetime = 50 -- faster completion (default = 4000ms)
+vim.opt.backup = false -- do not create a backup file
 vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.opt.expandtab = false -- do not convert tabs to spaces
 vim.opt.shiftwidth = 4 -- use 4 columns for tabs
