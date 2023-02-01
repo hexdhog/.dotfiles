@@ -16,6 +16,9 @@ require("plugin.config.luatab")
 require("plugin.config.lualine")
 require("plugin.config.tokyodark")
 
+-- languages
+require("plugin.config.vimtex")
+
 -- misc
 require("plugin.config.comment")
 require("plugin.config.nvim-autopairs")

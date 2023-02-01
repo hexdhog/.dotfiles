@@ -60,6 +60,7 @@ packer.startup(function(use)
 
 	-- languages
 	use { "tranvansang/octave.vim" }
+	use { "lervag/vimtex" }
 
 	-- git
 	use { "lewis6991/gitsigns.nvim" }
@@ -80,7 +81,6 @@ packer.startup(function(use)
 	use { "L3MON4D3/LuaSnip" }
 	use { "saadparwaiz1/cmp_luasnip" }
 	use { "ray-x/lsp_signature.nvim" }
-
 	use { "onsails/lspkind.nvim" }
 
 	-- PLUGINS TO TRY OUT
