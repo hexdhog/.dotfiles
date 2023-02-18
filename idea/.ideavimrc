@@ -10,7 +10,7 @@ let mapleader = " "
 map <C-i> :w<CR>
 
 " Unhighlight search
-map <C-h> :noh<CR>
+map <C-g> :noh<CR>
 
 " Prevent annoying 'Not an editor command' error
 cnoreabbrev ww WriteWithSudo
@@ -28,3 +28,31 @@ vnoremap K :m '<-2<CR>gv=gv
  " Resize windows
 nnoremap <silent> <leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+" copy and pase from clipboard
+vnoremap <leader>y" "+y
+nnoremap <leader>Y" "+yg_
+nnoremap <leader>y" "+yy
+nnoremap <leader>p "+p"
+nnoremap <leader>P "+P"
+vnoremap <leader>p "+p"
+vnoremap <leader>P "+P"
+
+" center cursor when <C-u> and <C-d>
+nnoremap <C-u> <C-u>zz0
+nnoremap <C-d> <C-d>zz0
+
+" center cursor when cycling through search
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" indent while in visual mode
+vnoremap > >gv
+vnoremap < <gv
+
+" move selected block
+vnoremap K :m <-2<CR>gv=gv
+vnoremap J :m <+1<CR>gv=gv
+
+" maintain copied text after visual paste
+vnoremap p "_dP

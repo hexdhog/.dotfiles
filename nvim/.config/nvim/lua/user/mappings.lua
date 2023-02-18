@@ -73,7 +73,6 @@ map("n", "<C-d>", "<C-d>zz0")
 -- center cursor when cycling through search
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-map("n", "n", "nzzzv")
 
 -- VISUAL --
 -- indent while in visual mode
