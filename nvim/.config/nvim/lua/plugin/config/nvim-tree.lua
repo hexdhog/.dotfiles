@@ -6,7 +6,7 @@ end
 
 local status, nvim_tree_config = pcall(require, "nvim-tree.config")
 if not status then
-	print("ERROR: module 'nvim-tree' not found")
+	print("ERROR: module 'nvim-tree.config' not found")
 	return
 end
 
@@ -20,9 +20,6 @@ nvim_tree.setup({
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
 	update_cwd = true,
-	ignore_buffer_on_setup = false,
-	open_on_setup = false,
-	open_on_setup_file = false,
 	open_on_tab = false,
 	ignore_buf_on_tab_change = {},
 	sort_by = "name",
@@ -131,11 +128,6 @@ nvim_tree.setup({
 		enable = false,
 		update_root = true,
 		ignore_list = {},
-	},
-	ignore_ft_on_setup = {
-		"startify",
-		"dashboard",
-		"alpha",
 	},
 	system_open = {
 		cmd = "",
