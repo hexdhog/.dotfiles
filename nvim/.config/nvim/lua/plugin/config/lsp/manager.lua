@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
 	require("plugin.config.lsp-signature").on_attach(client, bufnr)
 end
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = "█ ", Warn = "█ ", Hint = "█ ", Info = "█ " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
@@ -38,7 +38,7 @@ local lsp_flags = {
 }
 
 local handlers = {
-	['textDocument/publishDiagnostics'] = vim.lsp.with(
+	["textDocument/publishDiagnostics"] = vim.lsp.with(
 		vim.lsp.diagnostic.on_publish_diagnostics,
 		{
 			update_in_insert = true,
@@ -48,13 +48,23 @@ local handlers = {
 }
 
 M.setup = function(lspconfig, server)
-	local server_config = require("plugin.config.lsp.server." .. server)
-	server_config["on_attach"] = on_attach
-	server_config["flags"] = lsp_flags
-	server_config["capabilities"] = capabilities
-	server_config["handlers"] = handlers
-	lspconfig[server].setup(server_config)
-end
+	local config = require("plugin.config.lsp.server." .. server)
+	local on_pre_attach = config["on_attach"]
 
+	if (on_pre_attach == nil) then
+		config["on_attach"] = on_attach
+	else
+		config["on_attach"] = function(client, bufrn)
+			on_pre_attach(client, bufrn)
+			on_attach(client, bufrn)
+		end
+	end
+
+	config["flags"] = lsp_flags
+	config["capabilities"] = capabilities
+	config["handlers"] = handlers
+
+	lspconfig[server].setup(config)
+end
 
 return M
