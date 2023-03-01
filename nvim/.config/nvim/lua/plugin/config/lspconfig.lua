@@ -20,4 +20,17 @@ lspmanager.setup(lspconfig, "lua_ls")
 lspmanager.setup(lspconfig, "yamlls")
 lspmanager.setup(lspconfig, "jsonls")
 lspmanager.setup(lspconfig, "gopls")
-lspmanager.setup(lspconfig, "m68k") -- npm install -g m68k-lsp-server
+-- lspmanager.setup(lspconfig, "m68k") -- npm install -g m68k-lsp-server
+
+require('lspconfig').m68k.setup{
+	on_attach = function() print("m68k attached!") end,
+	init_options = {
+		includePaths = { '../include', '/home/myuser/includes' },
+		format = {
+			case = {
+				instruction = 'upper'
+			}
+		}
+	},
+	filetypes = { "m68k", "x68", "s" }
+}
