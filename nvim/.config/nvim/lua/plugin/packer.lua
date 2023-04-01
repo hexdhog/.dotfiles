@@ -84,5 +84,5 @@ packer.startup(function(use)
 	use { "onsails/lspkind.nvim" }
 
 	-- PLUGINS TO TRY OUT
-	-- use { "TimUntersberger/neogit"
+	-- use { "TimUntersberger/neogit" }
 end)

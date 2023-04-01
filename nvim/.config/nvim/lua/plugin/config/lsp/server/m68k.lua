@@ -1,9 +1,10 @@
 return {
 	on_attach = function()
 		print("attached to m68k file!")
-		-- vim.g.asmsyntax = "asm68k"
+		vim.g.asmsyntax = "asm68k"
+		vim.opt.textwidth = 80
 	end,
-	filetypes = { "x68" },
+	filetypes = { "m68k" },
 	init_options = {
 		format = {
 			align = {
