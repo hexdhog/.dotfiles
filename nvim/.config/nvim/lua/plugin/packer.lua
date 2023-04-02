@@ -82,6 +82,7 @@ packer.startup(function(use)
 	use { "saadparwaiz1/cmp_luasnip" }
 	use { "ray-x/lsp_signature.nvim" }
 	use { "onsails/lspkind.nvim" }
+	use { "rafamadriz/friendly-snippets" }
 
 	-- PLUGINS TO TRY OUT
 	-- use { "TimUntersberger/neogit" }
