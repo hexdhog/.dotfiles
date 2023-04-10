@@ -25,7 +25,7 @@ alt + shift - l : yabai -m window --resize right:50:0; \
 
 # fullscreen
 shift + cmd - f : yabai -m window --toggle zoom-fullscreen
-cmd + shift - t : yabai -m window --toggle split
+cmd + alt - t : yabai -m window --toggle split
 alt + shift - f : yabai -m window --toggle float
 
 # space
