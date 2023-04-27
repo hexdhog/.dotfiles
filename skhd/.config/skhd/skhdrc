@@ -1,4 +1,4 @@
-cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+cmd + shift - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
 cmd - d : /Applications/Firefox.app/Contents/MacOS/firefox
 
 # focus window

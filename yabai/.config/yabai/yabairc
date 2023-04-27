@@ -9,6 +9,8 @@ yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Dashlane$" manage=off
 yabai -m rule --add app="^wine64-preloader$" manage=off
+yabai -m rule --add app="^Installer$" manage=off
+yabai -m rule --add app="^NordVPN$" manage=off
 
 # windows
 yabai -m config									\
