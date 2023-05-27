@@ -1,5 +1,5 @@
-local status, telescope = pcall(require, "telescope")
-if not status then
+local telescope_status, telescope = pcall(require, "telescope")
+if not telescope_status then
 	print("ERROR: module \"telescope\" found")
 	return
 end
@@ -35,8 +35,8 @@ telescope.setup({
 	}
 })
 
-local status, builtin = pcall(require, "telescope.builtin")
-if not status then
+local builtin_status, builtin = pcall(require, "telescope.builtin")
+if not builtin_status then
 	print("ERROR: module \"telescope.builtin\" not found")
 	return
 end
@@ -48,11 +48,11 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "help tags" })
 vim.keymap.set('n', '<leader>fC', builtin.colorscheme, { desc = "colorscheme" })
 
 -- LSP
-vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "" })
-vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "" })
-vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = "" })
-vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, { desc = "" })
-vim.keymap.set('n', '<leader>dd', builtin.diagnostics, { desc = "" })
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "jump to definition" })
+vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "jump to references" })
+vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = "jump to implementation" })
+vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, { desc = "jump to type definitions" })
+vim.keymap.set('n', '<leader>dd', builtin.diagnostics, { desc = "diagnostics" })
 
 -- vim.keymap.set('n', '<leader>f?', builtin.lsp_incoming_calls, { desc = "" })
 -- vim.keymap.set('n', '<leader>f?', builtin.lsp_outgoing_calls, { desc = "" })
