@@ -1,8 +1,6 @@
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-sudo yabai --load-sa
-
 cmd + shift - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
-cmd - d : /Applications/Firefox.app/Contents/MacOS/firefox
+cmd + alt - c : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+cmd + alt - f : /Applications/Firefox.app/Contents/MacOS/firefox
 
 # focus window
 cmd - h : yabai -m window --focus west
