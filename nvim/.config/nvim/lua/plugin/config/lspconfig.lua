@@ -20,6 +20,3 @@ lspmanager.setup(lspconfig, "lua_ls")
 lspmanager.setup(lspconfig, "yamlls")
 lspmanager.setup(lspconfig, "jsonls")
 lspmanager.setup(lspconfig, "gopls")
-
--- temporarily disabled as it currently does not work
--- lspmanager.setup(lspconfig, "m68k") -- npm install -g m68k-lsp-server
