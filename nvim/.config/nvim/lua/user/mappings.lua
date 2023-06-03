@@ -54,6 +54,8 @@ vim.cmd("cnoreabbrev Q q")
 vim.cmd("cnoreabbrev Wq wq")
 vim.cmd("cnoreabbrev wQ wq")
 vim.cmd("cnoreabbrev WQ wq")
+map("n", "<C-q>", "<cmd>q<CR>")
+map("n", "<C-S-q>", "<cmd>q!<CR>")
 
 -- copy to clipboard
 map("v", "<leader>y", "\"+y")
