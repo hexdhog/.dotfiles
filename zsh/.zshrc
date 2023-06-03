@@ -38,3 +38,4 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias grep="grep --color=auto"
+alias nv="nvim"
