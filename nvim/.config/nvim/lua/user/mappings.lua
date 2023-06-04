@@ -26,13 +26,10 @@ map("n", "<leader>k", "<C-w>k")
 map("n", "<leader>l", "<C-w>l")
 
 -- resize windows
-map("n", "<S-Up>", "<cmd>resize +2<CR>")
-map("n", "<S-Down>", "<cmd>resize -2<CR>")
-map("n", "<S-Left>", "<cmd>vertical resize +2<CR>")
-map("n", "<S-Right>", "<cmd>vertical resize -2<CR>")
-
-map("n", "<leader>+", "<cmd>exe \"resize \" . (winheight(0) * 3/2)<CR>")
-map("n", "<leader>-", "<cmd>exe \"resize \" . (winheight(0) * 2/3)<CR>")
+map("n", "<Up>", "<cmd>resize +2<CR>")
+map("n", "<Down>", "<cmd>resize -2<CR>")
+map("n", "<Left>", "<cmd>vertical resize +2<CR>")
+map("n", "<Right>", "<cmd>vertical resize -2<CR>")
 
 -- disable highlight
 map("n", "<C-g>", "<cmd>noh<CR>")
