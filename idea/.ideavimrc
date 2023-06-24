@@ -4,11 +4,9 @@ set backspace=indent,eol,start
 set showmatch
 set hlsearch
 set ideajoin
+set commentary
 
 let mapleader = " "
-
-" Save shortcut
-map <C-i> :w<CR>
 
 " Unhighlight search
 map <C-g> :noh<CR>
