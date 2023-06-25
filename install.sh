@@ -3,7 +3,12 @@
 # delete it to avoid stow conflicts
 rm -rf ~/.zshrc
 
-exclude=(resources)
+exclude=("resources")
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	exclude += ("yabai" "skhd" "sketchybar")
+fi
 
 for dir in */ ; do
 	name=`echo $dir | sed 's/\///g'`
