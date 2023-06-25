@@ -5,9 +5,8 @@ rm -rf ~/.zshrc
 
 exclude=("resources")
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	exclude += ("yabai" "skhd" "sketchybar")
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	exclude+=("yabai" "skhd" "sketchybar")
 fi
 
 for dir in */ ; do
