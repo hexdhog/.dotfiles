@@ -72,4 +72,3 @@ vim.cmd("set formatoptions-=cro")
 
 -- set colorscheme
 vim.o.background = "dark"
--- vim.cmd("colorscheme gotham256") -- TODO: uncomment
