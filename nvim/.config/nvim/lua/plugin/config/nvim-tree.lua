@@ -83,7 +83,7 @@ nvim_tree.setup({
 	sync_root_with_cwd = false,
 	reload_on_bufenter = false,
 	respect_buf_cwd = false,
-	remove_keymaps = false, -- boolean (disable totally or not) or list of key (lhs)
+	-- remove_keymaps = false, -- boolean (disable totally or not) or list of key (lhs)
 	view = {
 		adaptive_size = false,
 		centralize_selection = false,
