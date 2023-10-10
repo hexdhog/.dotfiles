@@ -2,13 +2,20 @@ vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:¬")
 
-local status, indent_blankline = pcall(require, "indent_blankline")
+local status, ibl = pcall(require, "ibl")
 if not status then
-	print("ERROR: module \"indent_blankline\" not found")
+	print("ERROR: module \"ibl\" not found")
 	return
 end
 
-indent_blankline.setup({
-	show_end_of_line = true,
-	space_char_blankline = " ",
+-- TODO: review ibl v3 for new configuration
+ibl.setup({
+	debounce = 100,
+	indent = { char = "|" },
+	whitespace = { highlight = { "Whitespace", "NonText" } },
+	scope = { exclude = { language = { "lua" } }},
+	viewport_buffer = {
+		min = 30,
+		max = 500
+	}
 })
