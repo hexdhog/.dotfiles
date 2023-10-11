@@ -11,7 +11,7 @@ end
 -- TODO: review ibl v3 for new configuration
 ibl.setup({
 	debounce = 100,
-	indent = { char = "|" },
+	indent = { char = "▎" },
 	whitespace = { highlight = { "Whitespace", "NonText" } },
 	scope = { exclude = { language = { "lua" } }},
 	viewport_buffer = {
