@@ -13,14 +13,12 @@ end
 mason.setup()
 mason_lspconfig.setup({
 	ensure_installed = {
-		"bashls",
-		"clangd",
-		"dockerls",
-		"jsonls",
 		"lua_ls",
-		"marksman",
 		"pyright",
-		"yamlls",
+		"efm",
+		-- install manually:
+		-- mypy
+		-- ruff
 	},
 	automatic_installation = false,
 })

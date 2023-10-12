@@ -32,4 +32,4 @@ require("plugin.config.luasnip")
 require("plugin.config.nvim-cmp")
 require("plugin.config.lspkind")
 
-require("plugin.config.null-ls")
+-- require("plugin.config.null-ls")
