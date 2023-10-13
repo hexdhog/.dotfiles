@@ -1,5 +1,25 @@
-select = ["E", "F"]
-ignore = ["E501", "E701", "E702"]
+select = ["ALL"]
+ignore = [
+	"E501",
+	"E701",
+	"E702",
+	"D100",
+	"D101",
+	"D102",
+	"D103",
+	"D107",
+	"S101",
+	"I001",
+	"Q003",
+	"T201",
+	"PT018",
+	"ANN101",
+	"ANN102",
+	"ANN204",
+	"COM812",
+	"PLR2004",
+	"ERA001"
+]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
@@ -7,30 +27,30 @@ unfixable = []
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
+	".bzr",
+	".direnv",
+	".eggs",
+	".git",
+	".git-rewrite",
+	".hg",
+	".mypy_cache",
+	".nox",
+	".pants.d",
+	".pytype",
+	".ruff_cache",
+	".svn",
+	".tox",
+	".venv",
+	"__pypackages__",
+	"_build",
+	"buck-out",
+	"build",
+	"dist",
+	"node_modules",
+	"venv",
 ]
 
-line-length = 130
+line-length = 160
 
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
