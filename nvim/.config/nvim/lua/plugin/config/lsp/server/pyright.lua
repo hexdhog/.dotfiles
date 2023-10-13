@@ -6,10 +6,11 @@ return {
 		},
 		python = {
 			analysis = {
-				autoImportCompletions = true,
+				autoImportCompletions = false,
 				autoSearchPaths = true,
 				diagnosticMode = "workspace",
 				typeCheckingMode = "off",
+				useLibraryCodeForTypes = true,
 			}
 		}
 	}

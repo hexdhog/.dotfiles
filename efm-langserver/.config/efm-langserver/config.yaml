@@ -1,6 +1,5 @@
 version: 2
 root-markers:
-  - .git/
   - pyproject.toml
   - setup.py
   - setup.cfg
@@ -9,6 +8,7 @@ root-markers:
   - .ruff.toml
   - mypy.ini
   - .mypy.ini
+  - .git/
 lint-debounce: 200ms
 tools:
   python-ruff: &python-ruff
@@ -16,10 +16,11 @@ tools:
     lint-stdin: true
     lint-formats:
       - "%f:%l:%c: %m"
-    format-command: "ruff check --config ${HOME}/.config/ruff/config.toml --fix --exit-zero --quiet -"
-    format-stdin: true
+    lint-ignore-exit-code: true
+    # format-command: "ruff check --config ${HOME}/.config/ruff/config.toml --fix --exit-zero --quiet -"
+    # format-stdin: true
   python-mypy: &python-mypy
-    lint-command: "mypy --show-column-numbers"
+    lint-command: "mypy --show-column-numbers --config-file ${HOME}/.config/mypy/config"
     lint-formats:
       - "%f:%l:%c: %trror: %m"
       - "%f:%l:%c: %tarning: %m"
