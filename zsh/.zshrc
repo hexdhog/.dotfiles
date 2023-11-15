@@ -10,15 +10,13 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export PATH="/opt/homebrew/opt/bison/bin:${PATH}"
-
 export PATH="/opt/homebrew/opt/flex/bin:${PATH}"
-export HOMEBREW_HOME="/opt/homebrew"
-export PATH="${HOMEBREW_HOME}/bin:${PATH}"
-
 export HOME_BIN="${HOME}/bin"
 export PIO_BIN="${HOME}/.platformio/penv/bin"
-export PATH="${HOME_BIN}:${PIO_BIN}:${PATH}"
+export HOMEBREW_HOME="/opt/homebrew"
+export PATH="${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/opt:${HOME_BIN}:${PIO_BIN}:${PATH}"
 
 # ZSH
 export ZSH="${HOME}/.oh-my-zsh"

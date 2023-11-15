@@ -17,12 +17,17 @@ ignore = [
 	"Q003",
 	"T201",
 	"PT018",
+	"PT027",
 	"ANN101",
 	"ANN102",
 	"ANN204",
 	"COM812",
 	"PLR2004",
-	"ERA001"
+	"PLR0912",
+	"PLR0913",
+	"ERA001",
+	"FBT001",
+	"FBT002",
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
@@ -64,4 +69,3 @@ target-version = "py38"
 
 [per-file-ignores]
 "__init__.py" = ["E402"]
-"path/to/file.py" = ["E402"]

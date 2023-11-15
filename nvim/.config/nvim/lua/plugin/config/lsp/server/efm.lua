@@ -1,3 +1,3 @@
 return {
-	init_options = { documentFormatting = false },
+	init_options = { documentFormatting = false }
 }

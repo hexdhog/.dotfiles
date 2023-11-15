@@ -14,7 +14,6 @@ mason.setup()
 mason_lspconfig.setup({
 	ensure_installed = {
 		"lua_ls",
-		-- "pyright",
 		"jedi_language_server",
 		"efm",
 		-- install manually:

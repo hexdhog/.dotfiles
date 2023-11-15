@@ -1,4 +1,4 @@
-vim.opt.textwidth = 160
+vim.opt.textwidth = 190
 vim.opt.colorcolumn = ""
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
