@@ -3,10 +3,12 @@ ignore = [
 	"E501",
 	"E701",
 	"E702",
+	"E741",
 	"D100",
 	"D101",
 	"D102",
 	"D103",
+	"D105",
 	"D107",
 	"D203",
 	"D211",
@@ -16,6 +18,9 @@ ignore = [
 	"I001",
 	"Q003",
 	"T201",
+	"W292",
+	"TD002",
+	"TD003",
 	"PT018",
 	"PT027",
 	"ANN101",
@@ -67,5 +72,5 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 # Assume Python 3.8
 target-version = "py38"
 
-[per-file-ignores]
-"__init__.py" = ["E402"]
+[lint.per-file-ignores]
+"__init__.py" = ["F403"]
