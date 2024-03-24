@@ -57,14 +57,14 @@ vim.opt.number = true -- enable line numbers
 vim.opt.relativenumber = true -- enable relative line numbers
 vim.opt.numberwidth = 4 -- set number column width to 4
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
-vim.opt.wrap = false -- display lines as one long line
+vim.opt.wrap = true -- display lines as one long line
 vim.opt.scrolloff = 8 -- always keep 8 lines below/above current cursor
 vim.opt.sidescrolloff = 8 -- always keep 8 columns to current cursor
 vim.opt.shortmess:append "c" -- do not give ins-copmpletion-many message
 vim.opt.iskeyword:append({ "-" }) -- include "-" in word matches
 vim.opt.mouse = "a" -- allow the mouse to be used in all modes
 vim.opt.hidden = true
-vim.opt.textwidth = 100
+vim.opt.textwidth = 0
 vim.opt.colorcolumn = "+0" -- set vertical column at +0 columns after textwidth
 
 vim.cmd("set whichwrap+=<,>,[,],h,l") -- jump to next line when a line end is hit

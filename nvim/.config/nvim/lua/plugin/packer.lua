@@ -59,7 +59,6 @@ packer.startup(function(use)
 	use { "numToStr/Comment.nvim" }
 
 	-- languages
-	use { "tranvansang/octave.vim" }
 	use { "lervag/vimtex" }
 
 	-- git

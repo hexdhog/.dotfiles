@@ -28,8 +28,6 @@ require("plugin.config.indent-blankline")
 -- lsp & completion
 require("plugin.config.mason")
 require("plugin.config.lspconfig")
-require("plugin.config.luasnip")
+-- require("plugin.config.luasnip") -- disabled due to perfomance issues
 require("plugin.config.nvim-cmp")
 require("plugin.config.lspkind")
-
--- require("plugin.config.null-ls")
