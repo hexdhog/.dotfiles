@@ -12,7 +12,7 @@ export PIO_BIN="${HOME}/.platformio/penv/bin"
 export HOME_BIN="${HOME}/bin"
 export PATH="${HOMEBREW_HOME}/opt/bison/bin:${PATH}"
 export PATH="${HOMEBREW_HOME}/opt/flex/bin:${PATH}"
-export PATH="${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/opt:${HOME_BIN}:${PATH}"
+export PATH="${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/opt:${HOME_BIN}:${PIO_BIN}:${PATH}"
 
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
