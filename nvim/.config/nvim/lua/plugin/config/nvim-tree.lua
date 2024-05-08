@@ -87,11 +87,11 @@ nvim_tree.setup({
 	view = {
 		adaptive_size = false,
 		centralize_selection = false,
-		width = 35,
-		side = "left",
+		width = 40,
+		side = "right",
 		preserve_window_proportions = false,
-		number = false,
-		relativenumber = false,
+		number = true,
+		relativenumber = true,
 		signcolumn = "yes",
 		float = {
 			enable = false,
