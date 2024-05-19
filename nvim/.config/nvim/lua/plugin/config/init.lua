@@ -25,9 +25,13 @@ require("plugin.config.nvim-autopairs")
 require("plugin.config.nvim-colorizer")
 require("plugin.config.indent-blankline")
 
+-- dap
+require("plugin.config.dap")
+
 -- lsp & completion
 require("plugin.config.mason")
 require("plugin.config.lspconfig")
 -- require("plugin.config.luasnip") -- disabled due to perfomance issues
 require("plugin.config.nvim-cmp")
 require("plugin.config.lspkind")
+require("plugin.config.neodev")

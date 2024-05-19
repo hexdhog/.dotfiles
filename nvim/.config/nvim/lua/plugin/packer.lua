@@ -63,7 +63,7 @@ packer.startup(function(use)
 
 	-- git
 	use { "lewis6991/gitsigns.nvim" }
-	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+	use { 'sindrets/diffview.nvim', requires = "nvim-lua/plenary.nvim" }
 
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
@@ -83,6 +83,12 @@ packer.startup(function(use)
 	use { "ray-x/lsp_signature.nvim" }
 	use { "onsails/lspkind.nvim" }
 	use { "rafamadriz/friendly-snippets" }
+
+	-- dap
+	use { "mfussenegger/nvim-dap" }
+	use { "mfussenegger/nvim-dap-python" }
+	use { "theHamsta/nvim-dap-virtual-text" }
+	use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "folke/neodev.nvim" } }
 
 	-- PLUGINS TO TRY OUT
 	-- use { "TimUntersberger/neogit" }
