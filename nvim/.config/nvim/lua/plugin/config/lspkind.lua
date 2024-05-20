@@ -1,5 +1,5 @@
-local status, lspkind = pcall(require, "lspkind")
-if not status then
+local lspkind_status, lspkind = pcall(require, "lspkind")
+if not lspkind_status then
 	print("ERROR: module \"lspkind\" not found")
 	return
 end
@@ -32,12 +32,12 @@ lspkind.init({
 		Struct = "פּ",
 		Event = "",
 		Operator = "",
-		TypeParameter = ""
+		TypeParameter = "T"
 	},
 })
 
-local status, cmp = pcall(require, "cmp")
-if not status then
+local cmp_status, cmp = pcall(require, "cmp")
+if not cmp_status then
 	print("ERROR: module \"cmp\" not found")
 	return
 end

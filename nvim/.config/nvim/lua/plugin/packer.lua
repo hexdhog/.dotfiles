@@ -86,9 +86,9 @@ packer.startup(function(use)
 
 	-- dap
 	use { "mfussenegger/nvim-dap" }
-	use { "mfussenegger/nvim-dap-python" }
 	use { "theHamsta/nvim-dap-virtual-text" }
 	use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "folke/neodev.nvim" } }
+	use { "jay-babu/mason-nvim-dap.nvim", requires = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" } }
 
 	-- PLUGINS TO TRY OUT
 	-- use { "TimUntersberger/neogit" }

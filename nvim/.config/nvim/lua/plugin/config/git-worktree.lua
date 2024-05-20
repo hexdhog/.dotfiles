@@ -1,19 +1,19 @@
-local status, git_worktree = pcall(require, "git-worktree")
-if not status then
+local git_worktree_status, git_worktree = pcall(require, "git-worktree")
+if not git_worktree_status then
 	print("ERROR: module \"git-worktree\" not found")
 	return
 end
 
 git_worktree.setup({
-	change_directory_command = "cd", -- default: "cd",
-	update_on_change = true, -- default: true,
-	update_on_change_command = "e .", -- default: "e .",
-	clearjumps_on_change = true, -- default: true,
-	autopush = false -- default: false,
+	change_directory_command = "cd",
+	update_on_change = true,
+	update_on_change_command = "e .",
+	clearjumps_on_change = true,
+	autopush = false
 })
 
-local status, telescope = pcall(require, "telescope")
-if not status then
+local telescope_status, telescope = pcall(require, "telescope")
+if not telescope_status then
 	print("ERROR: module \"telescope\" not found")
 	return
 end

@@ -1,17 +1,6 @@
-local dap_status, dap = pcall(require, "dap")
-if not dap_status then
-	print("ERROR: module \"dap\" not found")
-	return
-end
-
-local dapui_status, dapui = pcall(require, "dapui")
-if not dapui_status then
-	print("ERROR: module \"dapui\" not found")
-	return
-end
-
-require("dap-python").setup()
-require("nvim-dap-virtual-text").setup()
+-- TODO: setup lsp-like configuration
+local dap = require("dap")
+local dapui = require("dapui")
 
 dapui.setup({
 	controls = {
@@ -85,6 +74,9 @@ dapui.setup({
 		max_value_lines = 100
 	}
 })
+
+require("nvim-dap-virtual-text").setup()
+
 dap.listeners.before.attach.dapui_config = function() dapui.open() end
 dap.listeners.before.launch.dapui_config = function() dapui.open() end
 dap.listeners.before.event_terminated.dapui_config = function() dapui.close() end
