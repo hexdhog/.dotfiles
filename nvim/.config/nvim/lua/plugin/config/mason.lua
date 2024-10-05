@@ -36,7 +36,7 @@ mason_dap.setup({
 	handlers = {
 		function(config)
 			-- all sources with no handler get passed here
-			require('mason-nvim-dap').default_setup(config)
+			require("mason-nvim-dap").default_setup(config)
 		end,
 		python = function(config)
 			config.adapters = {
@@ -44,7 +44,7 @@ mason_dap.setup({
 				command = vim.fn.stdpath("data") .. "/mason/bin/debugpy-adapter",
 				args = {},
 			}
-			require('mason-nvim-dap').default_setup(config)
+			require("mason-nvim-dap").default_setup(config)
 		end,
 	},
 })
