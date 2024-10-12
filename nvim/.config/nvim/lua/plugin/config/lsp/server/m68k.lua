@@ -11,7 +11,7 @@ return {
 				comment = 48,
 				operator = 0,
 				value = 0,
-				indentStyle = "tab",
+				indentStyle = "space",
 				tabSize = 8,
 				autoExtend = "line"
 			}
