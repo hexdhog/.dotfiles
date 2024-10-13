@@ -14,6 +14,8 @@ export PATH="${HOMEBREW_HOME}/opt/bison/bin:${PATH}"
 export PATH="${HOMEBREW_HOME}/opt/flex/bin:${PATH}"
 export PATH="${HOMEBREW_HOME}/bin:${HOMEBREW_HOME}/opt:${HOME_BIN}:${PIO_BIN}:${PATH}"
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
