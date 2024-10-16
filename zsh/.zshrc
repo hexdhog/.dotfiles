@@ -35,3 +35,4 @@ source $ZSH/oh-my-zsh.sh
 
 alias grep="grep --color=auto"
 alias nv="nvim"
+alias m68k="wine EDIT68K.exe"
