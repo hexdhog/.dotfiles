@@ -54,6 +54,10 @@ vim.cmd("cnoreabbrev WQ wq")
 map("n", "<C-q>", "<cmd>q<CR>")
 map("n", "<C-S-q>", "<cmd>q!<CR>")
 
+-- tabnew aliases
+vim.cmd("cnoreabbrev Tabnew tabnew")
+vim.cmd("cnoreabbrev TAbnew tabnew")
+
 -- copy to clipboard
 map("v", "<leader>y", "\"+y")
 map("n", "<leader>Y", "\"+yg_")
