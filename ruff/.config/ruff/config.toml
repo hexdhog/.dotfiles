@@ -33,6 +33,7 @@
 
 select = ["ALL"]
 ignore = [
+	"PD",
 	"E501",
 	"E701",
 	"E702",

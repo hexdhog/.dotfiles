@@ -20,6 +20,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+# ruby setup (from jekyll install guide)
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.4.1
+
 # ZSH
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_THEME="better-cypher"
