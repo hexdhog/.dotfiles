@@ -13,6 +13,7 @@ yabai -m rule --add app="^Installer$" manage=off
 yabai -m rule --add app="^NordVPN$" manage=off
 yabai -m rule --add app="^java$" manage=off
 yabai -m rule --add app="^Main$" manage=off
+yabai -m rule --add app="^python3$" manage=off
 
 # windows
 yabai -m config									\

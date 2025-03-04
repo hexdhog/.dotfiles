@@ -83,3 +83,8 @@ end
 if vim.fn.executable("python3") > 0 then
 	vim.g.python3_host_prog = system("which python3")
 end
+
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   pattern = "*.md",
+--   command = "silent !pandoc % -o %:r.pdf"
+-- })
