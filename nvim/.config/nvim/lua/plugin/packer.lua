@@ -13,7 +13,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 	vim.cmd("packadd packer.nvim")
 end
 
--- use a protected call so we don't error out on first use
+-- use a protected call so we don"t error out on first use
 local status, packer = pcall(require, "packer")
 if not status then
 	print("ERROR: module \"packer\" not found")
@@ -53,7 +53,7 @@ packer.startup(function(use)
 
 	-- misc/utils
 	use { "lukas-reineke/indent-blankline.nvim" }
-	use { 'norcalli/nvim-colorizer.lua' }
+	use { "norcalli/nvim-colorizer.lua" }
 	use { "mg979/vim-visual-multi" }
 	use { "windwp/nvim-autopairs" }
 	use { "numToStr/Comment.nvim" }
@@ -63,7 +63,7 @@ packer.startup(function(use)
 
 	-- git
 	use { "lewis6991/gitsigns.nvim" }
-	use { 'sindrets/diffview.nvim', requires = "nvim-lua/plenary.nvim" }
+	use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
 
 	-- syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }

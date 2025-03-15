@@ -39,6 +39,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias grep="grep --color=auto"
+alias grep="grep --color=always"
 alias nv="nvim"
 alias m68k="wine EDIT68K.exe"

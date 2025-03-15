@@ -22,6 +22,9 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"jedi_language_server",
 		"efm",
+		"html",
+		"cssls",
+		"ts_ls",
 		-- install manually:
 		-- mypy
 		-- ruff
