@@ -4,21 +4,18 @@ if not status then
 	return
 end
 
--- if not lspconfig.configs["eslint"] then
--- 	lspconfig.configs["eslint"] = {
--- 		default_config = {
--- 			cmd = { "eslint-lsp" }, -- Assumed executable from mason's eslint-lsp package
--- 			filetypes = { "javascript", "javascriptreact", "vue", "svelte", "astro", "tsx", "ts", "jsx", "js" },
--- 			root_dir = lspconfig.util.root_pattern("package.json", ".eslintrc*", "tsconfig.json"),
--- 			-- Additional settings can be added here, such as settings for Eslint rules
--- 		}
--- 	}
--- end
-
 local lspmanager = require("plugin.config.lsp.manager")
 
 -- TODO: delete debug enable
-vim.lsp.set_log_level('debug')
+-- vim.lsp.set_log_level('debug')
+
+vim.diagnostic.config({
+	virtual_text = {
+		-- prefix = "●", -- Optional prefix for the virtual text
+		source = "always", -- Show diagnostic source
+	},
+	severity_sort = true, -- Sort diagnostics by severity
+})
 
 lspmanager.setup(lspconfig, "efm")
 lspmanager.setup(lspconfig, "lua_ls")

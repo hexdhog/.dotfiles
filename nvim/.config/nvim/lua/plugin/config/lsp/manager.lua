@@ -16,7 +16,18 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "<leader>FF", function() vim.lsp.buf.format({ async = true }) end, bufopts)
 
-	require("plugin.config.lsp-signature").on_attach(client, bufnr)
+	-- TODO: fix lsp_signature erorr:
+	--[[
+lsp_signatur handler RPC[Error] code_name = InternalError, message = "ValueError: `column` parameter (1) is not in a valid range (0-0) for line 4 ('\\n')." data = {
+	traceback = { '  File "/Users/hexdhog/.local/share/nvim/mason/packages/jedi-language-server/venv/lib/python3.13/site-packages/pygls/protocol/json_rpc.py", line 266, in _handle_request\n    self._execute_request(msg_id, handler, params)\n    ~~~~~~~~~~~~~~
+	~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/hexdhog/.local/share/nvim/mason/packages/jedi-language-server/venv/lib/python3.13/site-packages/pygls/protocol/json_rpc.py", line 188, in _execute_request\n    self._send_response(msg_id, handler(params))
+	\n                                ~~~~~~~^^^^^^^^\n', '  File "/Users/hexdhog/.local/share/nvim/mason/packages/jedi-language-server/venv/lib/python3.13/site-packages/jedi_language_server/notebook_utils.py", line 373, in wrapped\n    result = f(notebook_serv
+	er, notebook_params)\n', '  File "/Users/hexdhog/.local/share/nvim/mason/packages/jedi-language-server/venv/lib/python3.13/site-packages/jedi_language_server/server.py", line 333, in signature_help\n    signatures_jedi = jedi_script.get_signatures(*jedi_lin
+	es)\n', "  File \"/Users/hexdhog/.local/share/nvim/mason/packages/jedi-language-server/venv/lib/python3.13/site-packages/jedi/api/helpers.py\", line 484, in wrapper\n    raise ValueError('`column` parameter (%d) is not in a valid range '\n
+	'(0-%d) for line %d (%r).' % (\n                         column, line_len, line, line_string))\n" }
+}
+	]]
+	-- require("plugin.config.lsp-signature").on_attach(client, bufnr)
 end
 
 local signs = { Error = "█ ", Warn = "█ ", Hint = "█ ", Info = "█ " }
