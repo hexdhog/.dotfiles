@@ -6,6 +6,17 @@ end
 
 telescope.setup({
 	defaults = {
+		vimgrep_arguments = {
+			"rg",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+			"--hidden",
+			"--no-ignore",
+		},
 		-- Default configuration for telescope goes here:
 		-- config_key = value,
 		mappings = {
@@ -18,18 +29,14 @@ telescope.setup({
 		}
 	},
 	pickers = {
-		-- Default configuration for builtin pickers goes here:
-		-- picker_name = {
-		--   picker_config_key = value,
-		--   ...
-		-- }
-		-- Now the picker_config_key will be applied every time you call this
-		-- builtin picker
 		find_files = {
-			hidden = true
-		},
-		live_grep = {
-			hidden = true
+			find_command = {
+				"rg",
+				"--color=never",
+				"--files",
+				"--no-ignore",
+				"--hidden"
+			},
 		}
 	},
 	extensions = {
@@ -46,6 +53,9 @@ if not builtin_status then
 	print("ERROR: module \"telescope.builtin\" not found")
 	return
 end
+
+-- telescope.load_extension("live_grep_args")
+-- rg --color=never --no-heading --with-filename --line-number --column --smart-case
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "find files" })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "live grep" })

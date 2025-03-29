@@ -17,3 +17,5 @@ for dir in */ ; do
 		stow "${dir}"
 	fi
 done
+
+launchctl load ~/Library/LaunchAgents/com.yabai.load-sa.plist
