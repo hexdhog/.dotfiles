@@ -1,6 +1,4 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = hexdhog
 	email = hexdhog@gmail.com
 
@@ -12,5 +10,5 @@
 [init]
 	defaultBranch = master
 
-[includeIf "gitdir:~/Documents/UIB/"]
-	path = ~/Documents/UIB/.gitconfig
+[includeIf "gitdir:~/Documents/uib/"]
+	path = ~/.uib.gitconfig
