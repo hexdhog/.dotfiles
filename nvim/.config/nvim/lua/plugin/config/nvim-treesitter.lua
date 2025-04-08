@@ -19,7 +19,8 @@ treesitter.setup({
 		"markdown",
 		"python",
 		"sql",
-		"yaml"
+		"yaml",
+		"latex"
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)

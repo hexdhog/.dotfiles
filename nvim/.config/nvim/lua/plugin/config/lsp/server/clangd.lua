@@ -8,11 +8,13 @@ return {
 		"--completion-style=detailed",
 		"--enable-config", -- clangd 11+ supports reading from .clangd configuration file
 		"--clang-tidy",
-		"--offset-encoding=utf-16", --temporary fix for null-ls
+		"--offset-encoding=utf-8", --temporary fix for null-ls
 		-- "--clang-tidy-checks=-*,llvm-*,clang-analyzer-*,modernize-*,-modernize-use-trailing-return-type",
 		-- "--fallback-style=Google",
 		-- "--header-insertion=never",
 		-- "--query-driver=<list-of-white-listed-complers>"
 	},
+	root_dir = require("lspconfig.util").root_pattern(".clang-format", ".git"),
+	capabilities = vim.lsp.protocol.make_client_capabilities(),
 	filetypes = { "c", "cpp", "objc", "objcpp", "h" },
 }
