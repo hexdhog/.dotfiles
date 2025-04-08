@@ -1,3 +1,4 @@
+local root_dir = require("lspconfig.util").root_pattern(".clang-format", ".git", ".uncrustify.cfg");
 return {
 	cmd = {
 		"clangd",
@@ -6,15 +7,34 @@ return {
 		"--pch-storage=disk",
 		"--log=info",
 		"--completion-style=detailed",
-		"--enable-config", -- clangd 11+ supports reading from .clangd configuration file
+		"--enable-config",   -- clangd 11+ supports reading from .clangd configuration file
 		"--clang-tidy",
-		"--offset-encoding=utf-8", --temporary fix for null-ls
+		"--offset-encoding=utf-8",
 		-- "--clang-tidy-checks=-*,llvm-*,clang-analyzer-*,modernize-*,-modernize-use-trailing-return-type",
 		-- "--fallback-style=Google",
 		-- "--header-insertion=never",
 		-- "--query-driver=<list-of-white-listed-complers>"
 	},
-	root_dir = require("lspconfig.util").root_pattern(".clang-format", ".git"),
+	root_dir = root_dir,
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 	filetypes = { "c", "cpp", "objc", "objcpp", "h" },
+	on_attach = function(_, bufnr)
+		local uncrustify = require("uncrustify")
+
+		local cfg_path = root_dir() .. "/.uncrustify.cfg"
+		if vim.fn.filereadable(cfg_path) == 0 then
+			cfg_path = vim.env.HOME .. "/.config/uncrustify.cfg"
+		end
+		
+		print(cfg_path)
+
+		uncrustify.setup({
+			uncrustify_bin_path = "uncrustify",
+			uncrustify_cfg_path = cfg_path,
+			filetype_mapping = { c = "c", cpp = "cpp" },
+			format_timeout = 5000
+		})
+
+		vim.keymap.set({ "n", "v" }, "<leader>FF", uncrustify.format, { noremap = true, silent = true, buffer = bufnr })
+	end
 }

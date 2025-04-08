@@ -83,6 +83,7 @@ packer.startup(function(use)
 	use { "ray-x/lsp_signature.nvim" }
 	use { "onsails/lspkind.nvim" }
 	use { "rafamadriz/friendly-snippets" }
+	use { "rickyelopez/uncrustify.nvim" }
 
 	-- dap
 	use { "mfussenegger/nvim-dap" }
