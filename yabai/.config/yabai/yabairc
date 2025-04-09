@@ -1,7 +1,7 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-# applications
+# applications off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
@@ -14,6 +14,11 @@ yabai -m rule --add app="^NordVPN$" manage=off
 yabai -m rule --add app="^java$" manage=off
 yabai -m rule --add app="^Main$" manage=off
 yabai -m rule --add app="^python3$" manage=off
+
+# applications on
+yabai -m rule --add app="^zathura$" manage=on
+
+# yabai -m window --layer below # attempt to make unmanaged windows not overlay managed windows
 
 # windows
 yabai -m config									\
