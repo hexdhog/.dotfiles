@@ -21,13 +21,15 @@ return {
 	on_attach = function(_, bufnr)
 		local uncrustify = require("uncrustify")
 
-		local cfg_path = root_dir() .. "/.uncrustify.cfg"
-		if vim.fn.filereadable(cfg_path) == 0 then
-			cfg_path = vim.env.HOME .. "/.config/uncrustify.cfg"
+		local cfg_paths = { root_dir() .. "/.uncrustify.cfg", root_dir() .. "/uncrustify.cfg", vim.env.HOME .. "/config/uncrustify/uncrustify.cfg" }
+		local cfg_path = nil;
+		for _, path in pairs(cfg_paths) do
+			if vim.fn.filereadable(path) == 1 then
+				cfg_path = path;
+				break;
+			end
 		end
 		
-		print(cfg_path)
-
 		uncrustify.setup({
 			uncrustify_bin_path = "uncrustify",
 			uncrustify_cfg_path = cfg_path,

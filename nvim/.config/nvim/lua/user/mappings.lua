@@ -88,3 +88,19 @@ map("v", "J", ":m '>+1<CR>gv=gv")
 
 -- maintain copied text after visual paste
 map("v", "p", '"_dP')
+
+-- spell
+
+function spell_toggle()
+	vim.opt.spell = not vim.opt.spell:get()
+	if vim.opt.spell:get() then
+		print("spellcheck on")
+	else
+		print("spellcheck off")
+	end
+end
+
+vim.keymap.set("n", "<leader>st", spell_toggle, { silent = true })
+vim.keymap.set("n", "<leader>se", function() vim.opt_local.spelllang = "en" end)
+vim.keymap.set("n", "<leader>ss", function() vim.opt_local.spelllang = "es" end)
+vim.keymap.set("n", "<leader>sb", function() vim.opt_local.spelllang = "es,en" end)

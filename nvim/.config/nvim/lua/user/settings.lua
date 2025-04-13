@@ -66,6 +66,9 @@ vim.opt.mouse = "a" -- allow the mouse to be used in all modes
 vim.opt.hidden = true
 vim.opt.textwidth = 0
 vim.opt.colorcolumn = "+0" -- set vertical column at +0 columns after textwidth
+vim.opt.spelllang = "en,es"
+-- TODO: can I have seperate spell files for different languages?
+vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
 vim.cmd("set whichwrap+=<,>,[,],h,l") -- jump to next line when a line end is hit
 vim.cmd("set formatoptions-=cro")

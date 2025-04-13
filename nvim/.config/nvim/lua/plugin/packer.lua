@@ -85,6 +85,8 @@ packer.startup(function(use)
 	use { "rafamadriz/friendly-snippets" }
 	use { "rickyelopez/uncrustify.nvim" }
 
+	use { "ravibrock/spellwarn.nvim" }
+
 	-- dap
 	use { "mfussenegger/nvim-dap" }
 	use { "theHamsta/nvim-dap-virtual-text" }
