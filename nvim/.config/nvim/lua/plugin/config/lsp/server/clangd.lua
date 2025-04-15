@@ -1,4 +1,6 @@
-local root_dir = require("lspconfig.util").root_pattern(".clang-format", ".git", ".uncrustify.cfg");
+local root_dir = require("lspconfig.util").root_pattern(".clang-format", ".git", ".uncrustify.cfg")();
+if root_dir == nil then root_dir = "."; end
+
 return {
 	cmd = {
 		"clangd",
@@ -21,7 +23,7 @@ return {
 	on_attach = function(_, bufnr)
 		local uncrustify = require("uncrustify")
 
-		local cfg_paths = { root_dir() .. "/.uncrustify.cfg", root_dir() .. "/uncrustify.cfg", vim.env.HOME .. "/config/uncrustify/uncrustify.cfg" }
+		local cfg_paths = { root_dir .. "/.uncrustify.cfg", root_dir .. "/uncrustify.cfg", vim.env.HOME .. "/.config/uncrustify/uncrustify.cfg" }
 		local cfg_path = nil;
 		for _, path in pairs(cfg_paths) do
 			if vim.fn.filereadable(path) == 1 then
