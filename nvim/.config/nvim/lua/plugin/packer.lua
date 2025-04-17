@@ -69,6 +69,9 @@ packer.startup(function(use)
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 	use { "nvim-treesitter/nvim-treesitter-context", requires = { "nvim-treesitter/nvim-treesitter" } }
 
+	-- obsidian
+	use({ "epwalsh/obsidian.nvim", tag = "*", { requires = "nvim-lua/plenary.nvim" }})
+
 	-- lsp
 	use { "neovim/nvim-lspconfig" }
 	use { "williamboman/mason.nvim", requires = "neovim/nvim-lspconfig" }
