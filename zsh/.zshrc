@@ -33,6 +33,8 @@ plugins=(
   # zsh-autosuggestions
 )
 
+export FZF_DEFAULT_OPTS="--bind=ctrl-p:up,ctrl-n:down"
+
 source $ZSH/oh-my-zsh.sh
 
 alias grep="grep --color=always"
