@@ -18,6 +18,7 @@ vim.opt.termguicolors = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.signcolumn = "yes"
+vim.opt.guicursor = "n-v-i-c-r-t:block"
 
 -- indentation
 vim.cmd("filetype plugin indent on")

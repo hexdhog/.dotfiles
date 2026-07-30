@@ -19,7 +19,7 @@ require("lazy").setup({
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("tokyonight")
+      vim.cmd.colorscheme("tokyonight-night")
     end,
   },
   {
@@ -117,5 +117,30 @@ require("lazy").setup({
         },
       },
     },
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {},
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup({
+        view = {
+          side = "right",
+          width = 35,
+        },
+      })
+
+      vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeToggle<cr>")
+    end,
   }
 })
