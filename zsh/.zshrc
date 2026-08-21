@@ -1,6 +1,6 @@
 export KEYTIMEOUT=10
 export TERM="xterm-256color"
-export EDITOR="$(which vim)"
+export EDITOR="$(which nvim)"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 export NVM_DIR="$HOME/.config/nvm"

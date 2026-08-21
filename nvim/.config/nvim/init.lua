@@ -3,10 +3,12 @@
 -- vim.opt.expandtab = false
 
 -- misc
+-- NOTE: "syntax on" and "filetype plugin indent on" are Neovim defaults.
+-- Running them here triggers filetype detection for the initial buffer before
+-- lazy.nvim registers its handlers, which breaks ft-lazy-loading on first open.
 vim.g.mapleader = " "
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.cmd.syntax("on")
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 vim.opt.backspace = { "indent", "eol", "start" }
@@ -21,7 +23,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.guicursor = "n-v-i-c-r-t:block"
 
 -- indentation
-vim.cmd("filetype plugin indent on")
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
