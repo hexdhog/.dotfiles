@@ -146,19 +146,19 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeToggle<cr>")
     end,
   },
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-    ft = { "markdown" },
-    opts = {
-      completions = {
-        lsp = { enabled = true },
-      },
-    },
-  },
+  -- {
+  --   "MeanderingProgrammer/render-markdown.nvim",
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "nvim-tree/nvim-web-devicons",
+  --   },
+  --   ft = { "markdown" },
+  --   opts = {
+  --     completions = {
+  --       lsp = { enabled = true },
+  --     },
+  --   },
+  -- },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {

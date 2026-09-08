@@ -41,3 +41,4 @@ source $ZSH/oh-my-zsh.sh
 
 alias grep="grep --color=always"
 alias nv="nvim"
+alias dict='zk edit --interactive --notebook-dir ${HOME}/dev/dictionary'

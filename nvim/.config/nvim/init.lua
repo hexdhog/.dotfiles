@@ -72,4 +72,16 @@ vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>")
 vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<cr>")
 
+-- accept common capitalization typos when saving and quitting.
+local save_quit_commands = { "W", "W!", "Q", "Q!", "Wq", "Wq!", "wQ", "wQ!", "WQ", "WQ!" }
+
+for _, command in ipairs(save_quit_commands) do
+  vim.cmd(([[cnoreabbrev <expr> %s getcmdtype() == ':' && getcmdline() ==# '%s' ? '%s' : '%s']]):format(
+    command,
+    command,
+    command:lower(),
+    command
+  ))
+end
+
 require("config.lazy")
