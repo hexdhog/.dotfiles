@@ -100,11 +100,13 @@ require("lazy").setup({
 
       vim.keymap.set("n", "<leader>cm", "<cmd>Mypy<cr>")
    
-      vim.lsp.config("lua_ls", {})
-      vim.lsp.config("pyright", {})
-      vim.lsp.config("ruff", {})
+      -- diagnostics as virtual text
+      vim.diagnostic.config({ virtual_text = true })
 
-      vim.lsp.enable({ "lua_ls", "pyright", "ruff" })
+      -- completion capabilities for blink.cmp
+      vim.lsp.config("*", { capabilities = require("blink.cmp").get_lsp_capabilities() })
+
+      vim.lsp.enable({ "lua_ls", "pyright", "ruff", "clangd", "gopls", "jdtls", "ada_ls" })
     end,
   },
   {
@@ -159,6 +161,13 @@ require("lazy").setup({
   --     },
   --   },
   -- },
+  {
+    "mbbill/undotree",
+    cmd = "UndotreeToggle",
+    keys = {
+      { "<leader>u", "<cmd>UndotreeToggle<cr>" },
+    },
+  },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {

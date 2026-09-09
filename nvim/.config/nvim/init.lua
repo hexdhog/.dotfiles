@@ -31,6 +31,12 @@ vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- persistent undo
+local undodir = vim.fn.stdpath("state") .. "/undo"
+vim.fn.mkdir(undodir, "p")
+vim.opt.undodir = undodir
+vim.opt.undofile = true
+
 -- copy/paste from clipboard
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>y", '"+y')
