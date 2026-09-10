@@ -169,6 +169,18 @@ require("lazy").setup({
     },
   },
   {
+    "sheng-tse/jupynvim",
+    build = function(plugin)
+      local install = loadfile(plugin.dir .. "/lua/jupynvim/install.lua")()
+      install.run(plugin)
+    end,
+    config = function()
+      require("jupynvim").setup({
+        image_renderer = "placeholder",
+      })
+    end,
+  },
+  {
     "nvim-lualine/lualine.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
